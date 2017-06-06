@@ -1,0 +1,303 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,900');
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+body{
+  font-family: 'Roboto', sans-serif;
+  font-weight:400;
+  color: rgba(0,0,0,0.78);
+}
+
+
+
+.siteNav{
+  display:inline-block;
+  color: green;
+  margin-left:5rem;
+  margin-top:2rem;
+  margin-bottom:0rem;
+  border: 2px solid green;
+  padding:1rem;
+  text-align: center;
+}
+
+
+h1{
+  font-weight: 900;
+ color: rgba(0,0,0,0.1);
+  font-size: 5rem;
+}
+
+h2{
+  margin-top:5rem;
+  font-weight: 400;
+   color: rgba(0,0,0,0.5);
+  font-size: 2rem;
+}
+
+h3{
+  font-weight: 400;
+ color: rgba(0,0,0,0.6);
+  font-size: 1.5rem;
+  margin-bottom:2rem;
+}
+
+
+h4{
+  font-weight: 900;
+  color:rgba(0,0,0,0.78);
+  font-size: 1rem;
+  margin-bottom:0.2rem;
+}
+
+p{
+  margin:0rem;
+}
+
+
+section{
+  margin-top:0rem;
+  margin-bottom:0rem;
+}
+
+
+
+
+.fullScreenNav{
+  width:100%;
+  height:600px;
+/*   background-color:red; */
+  border: 2px solid black;
+  position: relative;
+}
+
+.menuIcon{
+  position:absolute;
+  top:20px;
+  right: 30px;
+  width:4rem;
+  height:auto;
+  opacity:0.5;
+}
+
+
+.smallNavButtons1{
+  display:block;
+  position:absolute;
+  top:100px;
+  right: 250px;
+  width:8rem;
+  height:auto;
+  opacity:0.6;
+  font-size:1.5rem;
+}
+
+
+.smallNavButtons2{
+  display:block;
+  position:absolute;
+  top:100px;
+  right: 100px;
+  width:8rem;
+  height:auto;
+  opacity:0.6;
+  font-size:1.5rem;
+}
+
+
+.bigNavButtons1{
+  display:block;
+  position:absolute;
+  top:250px;
+  left:100px;
+  width:8rem;
+  height:auto;
+  opacity:0.4;
+  font-size:3rem;
+}
+
+.bigNavButtons2{
+  display:block;
+  position:absolute;
+  top:330px;
+  left:100px;
+  width:8rem;
+  height:auto;
+  opacity:0.4;
+  font-size:3rem;
+}
+
+.bigNavButtons3{
+  display:block;
+  position:absolute;
+  top:410px;
+  left:100px;
+  width:8rem;
+  height:auto;
+  opacity:0.4;
+  font-size:3rem;
+}
+
+.contact1{
+  display:block;
+  position:absolute;
+  top:410px;
+  left:550px;
+  width:8rem;
+  height:auto;
+  opacity:0.7;
+  font-size:1rem;
+}
+
+
+.contact2{
+  display:block;
+  position:absolute;
+  top:460px;
+  left:550px;
+  width:8rem;
+  height:auto;
+  opacity:0.7;
+  font-size:1rem;
+}
+
+
+
+
+
+
+
+
+.inTextLink{
+  color:blue;
+  text-decoration: none;
+}
+
+.inTextLink:hover{
+  text-decoration: underline;
+}
+
+
+.navbutton{
+  display: inline-block;
+  
+  margin: 20px;
+  padding: 1rem 2rem;
+  
+  text-decoration: none;
+ 
+  font-weight: 900;
+  
+  font-size: 35px;
+  color: rgba(0,0,0,0.3);
+
+}
+
+
+.button{
+ background-color: rgb(244,81,30);
+  color: white;
+  
+  border: 2px white;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 30px;
+  text-transform:uppercase;
+
+}
+
+input[type="text"]{
+  border: 1px solid black;
+  border-color: rgba(0,0,0,0.3);
+
+  border-top: 0px;
+  border-right: 0px;
+  border-left: 0px;
+  margin-right: 1rem;
+  margin-left:1rem;
+  margin-top:0rem;
+  padding-bottom:0.5rem;
+  padding-top:0.5rem;
+}
+
+input[type="text"]:focus{
+  outline:none;
+}
+
+input[type="text"]::placeholder{
+  color:rgba(0,0,0.4);
+}
+
+
+.fieldLabel{
+  display:block;
+  color:blue;
+  margin-left: 1rem;
+  margin-bottom:0rem;
+  margin-top:1rem;
+  font-size: 0.6rem
+}
+
+
+
+.mainNav{
+5  width:100%;
+  
+  height: 500px;
+  border:x solid black;
+}
+
+.mainNavItem{
+  width:33.33%;
+  height: inherit;
+  float:left;
+}
+
+.learn{
+  border-right: 1px solid black;
+}
+
+.bundles{
+  border-right: 1px solid black;
+}
+
+
+.productListing{
+  
+  position:relative;
+  margin:1 rem;
+  padding-top: 0.5rem;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  padding-bottom: 1rem;
+  width: 400px;
+  min-height: 300px;
+  border: 0px solid black;
+  border-radius: 3px;
+  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+ 
+  
+}
+
+.productDetails{
+  display: block;
+  width:inherit;
+  height:90px;
+}
+
+.bundleName{
+  float:left;
+}
+
+.price{
+  display: inline;
+  float: right;
+  margin-top:2rem;
+  margin-right:5rem;
+}
