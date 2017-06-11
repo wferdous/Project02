@@ -32,6 +32,7 @@ h1{
   font-weight: 900;
  color: rgba(0,0,0,0.1);
   font-size: 5rem;
+  text-align: center;
 }
 
 h2{
@@ -54,10 +55,24 @@ h4{
   color:rgba(0,0,0,0.78);
   font-size: 1rem;
   margin-bottom:0.2rem;
+
+}
+
+h5{
+  margin-top:6rem;
+  margin-left:  0.5rem;
+  font-weight: 400;
+  color: #999999;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  float: left;
 }
 
 p{
-  margin:0rem;
+ 
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  width: 50%;
 }
 
 
@@ -247,7 +262,7 @@ input[type="text"]::placeholder{
 
 
 .mainNav{
-5  width:100%;
+   width:100%;
   
   height: 500px;
   border:x solid black;
@@ -276,8 +291,9 @@ input[type="text"]::placeholder{
   padding-right: 1rem;
   padding-left: 1rem;
   padding-bottom: 1rem;
-  width: 400px;
-  min-height: 300px;
+
+  width: 100%;
+  min-height: 500px;
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
@@ -291,13 +307,95 @@ input[type="text"]::placeholder{
   height:90px;
 }
 
-.bundleName{
+.title{
   float:left;
+  font-size: 3rem;
+  text-transform: uppercase;
+
+
 }
 
-.price{
-  display: inline;
-  float: right;
-  margin-top:2rem;
-  margin-right:5rem;
+.description{
+
+  margin-top:7rem;
+  margin-left:  0.5rem;
 }
+
+
+table, th, td{
+
+margin-top:4rem;
+margin-left:  0.5rem;
+
+
+
+}
+
+/*.price{
+  margin-top:4rem;
+  margin-left:  0.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #999999;
+  font-size: 0.8rem;
+  float: left;
+}
+
+
+.calories{
+  margin-top:4rem;
+  margin-left:  4rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #999999;
+  font-size: 0.8rem;
+  float: left;
+}
+
+
+.goodFor{
+  margin-top:4rem;
+  margin-left: 4rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+  color: #999999;
+  font-size: 0.8rem;
+  float: left;
+}
+
+
+
+.priceNumber{
+  margin-top:8rem;
+  margin-left: 0.5rem;
+
+  font-weight: 900;
+  color:rgba(0,0,0,0.78);
+  font-size: 1rem;
+  float: left;
+}
+
+  
+
+
+.caloriesNumber{
+
+  margin-top:8rem;
+  margin-left:  4rem;
+  font-weight: 900;
+  color:rgba(0,0,0,0.78);
+  font-size: 1rem;
+  float: left;
+}
+
+
+.goodForNumber{
+  margin-top:8rem;
+  margin-left: 4rem;
+  font-weight: 900;
+  color:rgba(0,0,0,0.78);
+  font-size: 1rem;
+  float: left;
+}
+
+
