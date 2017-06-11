@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>CSS Positioning - Code Task</title>
-<meta charset="utf-8">
-<link href="../css/normalize.css" rel="stylesheet">
-<link href="../css/main.css" rel="stylesheet">
-</head>
-<body>
+	<head>
+		<title>MainMenu</title>
+		<meta charset="utf-8">
+		<link href="../css/normalize.css" rel="stylesheet">
+		<link href="../css/mainMenu.css" rel="stylesheet">
+	</head>
+	<body>
+
+	
+
+	
 
 
-<div>
+	<img src="../img/icons/menu.svg" class="menuIcon" width="90" height="90" onclick="openMenu()">
 
 
-</div>
+	<div class="mainMenu menuHide" id="mainMenuOpened">
+		<img src="../img/icons/close.svg" class="closeIcon menuHide" width="90" height="90">
+		<a class="menuHide menuButtonsMain"> Home </a>
+		<a class="menuHide menuButtonsMain"> Home </a>
+		
+	</div>
 
 
 
-</body>
+	<script>
+		function openMenu(){
+			// document.getElementById("mainMenu").style.pointer-events="none";
+			// document.getElementById("mainMenuOpened").style.opacity="1";
+
+
+			var menuElements = document.getElementsByClassName('menuHide');
+    		var count = menuElements.length;
+
+			for (var i = 0; i < count; i++) {
+				var element = menuElements[i];
+				element.style.display="block";
+			}
+
+
+		}
+
+
+	</script>
+
+
+
+	</body>
 </html>

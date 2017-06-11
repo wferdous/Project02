@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+
+.menuIcon{
+	position:fixed;
+  top:20px;
+  right: 40px;
+
+  width:56px;
+  height:56px;
+
+  opacity:0.5;
+}
+
+
+
+.closeIcon{
+
+  top:20px;
+  right: 40px;
+
+  width:56px !important;
+  height:56px !important;
+
+  opacity:0.5;
+}
+
+
+#mainMenuOpened {
+	position: fixed;
+	width:100%;
+	height:500px;
+
+	background-color:red;
+
+	display: none;
+	opacity:1;
+
+}
+
+
+#mainMenuOpened * {
+	position: fixed;
+	display: none;
+}
+
+
+
+.menuButtonsMain{
+	bottom:20px;
+	left:20px;
+	width:200px;
+	height:50px;
+}
