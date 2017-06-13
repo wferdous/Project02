@@ -3,10 +3,13 @@
 	<head>
 		<title>MainMenu</title>
 		<meta charset="utf-8">
+
 		<link href="../css/normalize.css" rel="stylesheet">
+		<link href="../css/main.css" rel="stylesheet">
 		<link href="../css/mainMenu.css" rel="stylesheet">
 	</head>
-	<body>
+
+	<body  onload="onLoad()">
 
 	
 
@@ -17,10 +20,28 @@
 
 
 	<div class="mainMenu menuHide" id="mainMenuOpened">
-		<img src="../img/icons/close.svg" class="closeIcon menuHide" width="90" height="90">
-		<a class="menuHide menuButtonsMain"> Home </a>
-		<a class="menuHide menuButtonsMain"> Home </a>
+		<img src="../img/icons/close.svg" class="closeIcon menuHide" width="90" height="90" onclick="closeMenu()">
+		<h1 class="menuHide menuButtonsMain menuButtonsMain01"> HOME </h1>
+		<h1 class="menuHide menuButtonsMain menuButtonsMain02"> PROFILE </h1>
+
+
+		<h2 class="menuHide menuButtonsLogIn"> LOG IN </h2>
+		<h2 class="menuHide menuButtonsRegister"> REGISTER </h2>
+
+
+		<div class="menuHide cart menuHide" id="cart">
+			<h2 class="menuHide yourCart"> Your Cart </h2>
+			<hr class="menuHide line">
+			<h2 class="menuHide yourCartText"> It is empty now </h2>
+		</div>
+
+
+		<h2 class="menuHide contact contanct">
+		604-594-3948<br>
+		contact_us@freshie.ca</h2>
+
 		
+
 	</div>
 
 
@@ -41,6 +62,40 @@
 
 
 		}
+
+
+
+		function closeMenu(){
+			var menuElements = document.getElementsByClassName('menuHide');
+    		var count = menuElements.length;
+
+			for (var i = 0; i < count; i++) {
+				var element = menuElements[i];
+				element.style.display="none";
+			}
+
+
+		}
+
+
+		function onLoad(){
+			// var vieportHeight = document.documentElement.clientHeight/clientWidth;
+
+			// document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
+			// document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+			document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
+
+			document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
+			
+			if(window.innerWidth<=720){
+				document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
+			}
+			
+		}
+
+		window.onresize = function(event) {
+    		onLoad();
+		};
 
 
 	</script>
