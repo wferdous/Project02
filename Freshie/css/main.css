@@ -280,19 +280,25 @@ input[type="text"]::placeholder{
   
   position:relative;
   margin:1 rem;
-  padding-top: 0.5rem;
-  padding-right: 1rem;
+  padding-top: 0rem;
+  padding-right: 0rem;
   padding-left: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 0rem;
 
   width: 100%;
   min-height: 500px;
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
- 
-  
 }
+
+@media (max-width: 30em){
+  .productListing{
+    padding-bottom: 2rem;
+  }
+}
+
+
 
 .productDetails{
   display: block;
@@ -309,86 +315,150 @@ input[type="text"]::placeholder{
 }
 
 .description{
+  margin-top:6rem;
+  margin-left:  0.rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  width: 40%;
+}
 
-  margin-top:7rem;
-  margin-left:  0.5rem;
+@media (max-width: 30em){
+  .description{
+    width: 90%;
+  }
 }
 
 
 table, th, td{
-
 margin-top:4rem;
+text-align: left;
+}
+
+
+
+
+.price{
 margin-left:  0.5rem;
-
-
-
+border-right: 1px solid rgba(0,0,0,0.1);
+display:block;
 }
 
-/*.price{
-  margin-top:4rem;
-  margin-left:  0.5rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  color: #999999;
-  font-size: 0.8rem;
-  float: left;
+@media (max-width: 30em){
+  .price{
+    width: 80%;
+  }
 }
-
 
 .calories{
-  margin-top:4rem;
-  margin-left:  4rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  color: #999999;
-  font-size: 0.8rem;
-  float: left;
+padding-left: 4rem;
+padding-right: 3rem;
+border-right: 1px solid rgba(0,0,0,0.1);
+display:block;
+}
+@media (max-width: 30em){
+  .calories{
+    width: 80%;
+    padding-left: 0rem;
+  }
 }
 
 
 .goodFor{
-  margin-top:4rem;
-  margin-left: 4rem;
-  margin-bottom: 2rem;
-  font-weight: 400;
-  color: #999999;
-  font-size: 0.8rem;
-  float: left;
+padding-left: 4rem;
+display:block;
 }
-
-
+@media (max-width: 30em){
+  .goodFor{
+    width: 100%;
+    padding-left: 0rem;
+  }
+}
 
 .priceNumber{
-  margin-top:8rem;
-  margin-left: 0.5rem;
-
-  font-weight: 900;
-  color:rgba(0,0,0,0.78);
-  font-size: 1rem;
-  float: left;
+margin-left:  0.5rem;
+padding-right: 3rem;
+font-weight: normal;
+border-right: 1px solid rgba(0,0,0,0.1);
+display:block;
 }
 
-  
-
+@media (max-width: 30em){
+  .priceNumber{
+    width: 80%;
+  }
+}
 
 .caloriesNumber{
+padding-left: 4rem;
+padding-right: 3rem;
+font-weight: normal;
+border-right: 1px solid rgba(0,0,0,0.1);
+display:block;
+}
 
-  margin-top:8rem;
-  margin-left:  4rem;
-  font-weight: 900;
-  color:rgba(0,0,0,0.78);
-  font-size: 1rem;
-  float: left;
+@media (max-width: 30em){
+  .caloriesNumber{
+    width: 80%;
+    padding-left: 0rem;
+  }
 }
 
 
 .goodForNumber{
-  margin-top:8rem;
-  margin-left: 4rem;
-  font-weight: 900;
-  color:rgba(0,0,0,0.78);
-  font-size: 1rem;
-  float: left;
+padding-left: 4rem;
+font-weight: normal;
+display:block;
+}
+
+@media (max-width: 30em){
+  .goodForNumber{
+    width: 80%;
+    padding-left: 0rem;
+  }
+}
+
+.fruitList{
+  margin-top: 1rem;
+  margin-left:  0.5rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+  width: 40%;
+}
+
+@media (max-width: 30em){
+  .fruitList{
+    width: 92%;
+  }
 }
 
 
+img{
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 30em){
+  img{
+    width: 104.5%;
+  }
+}
+
+.floatingButton{
+  
+  position:relative;
+  /*margin:1 rem;
+  padding-top: 0rem;
+  padding-right: 0rem;
+  padding-left: 1rem;
+  padding-bottom: 0rem;*/
+
+  width: 100%;
+  border-radius: 54;
+  color: red;
+  border: 0px solid black;
+  border-radius: 3px;
+  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+ 
+  
+}
