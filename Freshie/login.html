@@ -8,21 +8,68 @@
 		<link href="css/mainMenu.css" rel="stylesheet">
 	</head>
 
-	<body>
+	<body onload="onLoad()">
 
 
-		<div class="logInBlock">
+		<div class="logInBlock logInBlock01">
 			
 			<h1>Sign In</h1>
+
+			<form>
+			<p class="fieldLabel"> Label </p>
+			<input type="text" placeholder="hey">
+			</form>
 			
 		</div>
 
-		<div class="logInBlock">
+		<div class="logInBlock logInBlock02">
 		
 			<h1>Register</h1>
+
+			<form>
+			<p class="fieldLabel"> Label </p>
+			<input type="text" placeholder="hey">
+			</form>
 					
 				
 		</div>
+
+
+
+
+
+
+
+
+
+
+		<script>
+		
+
+
+		function onLoad(){
+			
+			
+
+			var logInBlocks = document.getElementsByClassName('logInBlock');
+    		var count = logInBlocks.length;
+
+			for (var i = 0; i < count; i++) {
+				var element = logInBlocks[i];
+				element.style.height=(window.innerHeight)+"px";
+			}
+
+
+
+			
+		}
+
+		window.onresize = function(event) {
+    		onLoad();
+		};
+
+
+	</script>
 
 
 	</body>
