@@ -9,7 +9,7 @@
 		<link href="../css/mainMenu.css" rel="stylesheet">
 	</head>
 
-	<body  onload="onLoad()">
+	<body onload="onLoad()">
 
 	
 
@@ -85,11 +85,27 @@
 			// document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
 			document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
 
-			document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
+			
 			
 			if(window.innerWidth<=720){
 				document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
+			}else{
+				document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
 			}
+
+
+
+
+			var contentBlocks = document.getElementsByClassName('contentBlock');
+    		var count = contentBlocks.length;
+
+			for (var i = 0; i < count; i++) {
+				var element = contentBlocks[i];
+				element.style.height=(window.innerHeight/100*80)+"px";
+			}
+
+
+
 			
 		}
 
@@ -99,6 +115,66 @@
 
 
 	</script>
+
+
+
+
+	<div class="contentBlock">
+		<h1>Updates</h1>
+		<p class="paragraph"> This is a placeholder paragraph. </p>
+
+	</div>
+
+
+
+
+
+	<div class="contentBlock">
+		<h1>Updates</h1>
+		<p class="paragraph"> This is a placeholder paragraph. </p>
+
+	</div>
+
+
+
+
+
+	<div class="contentBlock">
+		<h1>Updates</h1>
+		<p class="paragraph"> This is a placeholder paragraph. </p>
+
+	</div>
+
+
+
+
+
+	<div class="contentBlock">
+		<h1>Updates</h1>
+		<p class="paragraph"> This is a placeholder paragraph. </p>
+
+	</div>
+
+
+
+
+
+	<div class="contentBlock">
+		<h1>Updates</h1>
+		<p class="paragraph"> This is a placeholder paragraph. </p>
+
+	</div>
+
+
+
+
+
+
+	
+
+
+
+
 
 
 
