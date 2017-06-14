@@ -30,9 +30,10 @@ body{
 
 h1{
   font-weight: 900;
- color: rgba(0,0,0,0.1);
+ color: rgba(0,0,0,0.2);
   font-size: 5rem;
-  text-align: center;
+  text-align: left;
+  padding-left:4rem !important;
 }
 
 h2{
@@ -69,10 +70,16 @@ h5{
 }
 
 p{
- 
+ font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   margin-left: 0.5rem;
   width: 50%;
+}
+
+
+.paragraph{
+  width:200px;
+  margin:4rem;
 }
 
 
@@ -209,12 +216,15 @@ section{
 
 
 .button{
- background-color: rgb(244,81,30);
-  color: white;
+ background-color: rgba(244,81,30,0);
+  color: rgb(244,81,30);
+  text-align: center;
   
-  border: 2px white;
+  border: 2px solid rgb(244,81,30);
   margin-top: 5px;
+  
   padding: 10px;
+  padding-bottom:15px;
   font-size: 30px;
   text-transform:uppercase;
 
@@ -445,22 +455,35 @@ img{
 }
 
 .floatingButton{
-  position:relative;
-  fill: #FFEB3B;
-  top:200px;
-  right:530px;
-  z-index:5;
-}
-
-@media (max-width: 30em){
-  .floatingButton{
-  position:relative;
   
-  top:260px;
-  right:25px;
-  z-index:5;
-  }
+  position:relative;
+
+  width: 100%;
+  border-radius: 54;
+  color: red;
+  border: 0px solid black;
+  border-radius: 3px;
+  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+ 
+  
 }
 
 
+
+
+.contentBlock{
+  width:100%;
+  height:500px;
+  background-color: white;
+  border: 2px solid black;
+}
+
+
+
+.logInBlock{
+  width:50%;
+  background:white;
+  display: inline-block;
+  float: left;
+}
 
