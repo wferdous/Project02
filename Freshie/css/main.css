@@ -255,25 +255,45 @@ input[type="text"]::placeholder{
 }
 
 
-input[type="text"].dark{
+input[type="text"].creditCardInput{
+  
+  margin-right: 1rem;
+  margin-left:1rem;
+  margin-top:0rem;
+  padding-bottom:0.6rem;
+  padding-top:0.6rem;
+  background-color: rgba(0,0,0,0);
+  color:white;
+  border: none;
+}
+
+input[type="text"].creditCardInput::placeholder{
+
   border: 1px solid white;
   border-color: rgba(255,255,255,1);
 
   border-top: 0px;
   border-right: 0px;
   border-left: 0px;
-  margin-right: 1rem;
-  margin-left:1rem;
-  margin-top:0rem;
   padding-bottom:0.5rem;
-  padding-top:0.5rem;
-  background-color: rgba(0,0,0,0);
-  color:white;
+
+
+  color:rgba(255,255,255, 0.4);
+
+  
 }
 
-input[type="text"].dark::placeholder{
-  color:rgba(255,255,255, 0.4);
+.creditCardNumber{
+  font-size: 1.5rem;
 }
+
+
+.cvv{
+  float: right;
+  padding-right: 0;
+}
+
+
 
 
 
@@ -526,7 +546,7 @@ img{
   
   position:relative;
   margin:1 rem;
-  padding-top: 0rem;
+  padding-top: 0.5rem;
   padding-right: 0rem;
   padding-left: 1rem;
   padding-bottom: 0rem;
