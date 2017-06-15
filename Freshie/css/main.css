@@ -511,14 +511,20 @@ img{
 
 .floatingButton{
   
-  position:relative;
+  position:absolute
 
   width: 100%;
   border-radius: 54;
-  color: red;
+
   border: 0px solid black;
-  border-radius: 3px;
-  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+
+  
+  top: 12rem;
+  z-index: 5;
+
+  
+
+
  
   
 }
