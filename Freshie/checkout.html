@@ -12,26 +12,39 @@
 <body>
 	<section>
 		<div class="checkoutCard">
-        <div>
 
-        <div>
-        <h2 class="shippingAddress">Shipping Addrees</h2>
-        </div>
+    <h2 class="shippingAddress">Checkout</h2>
 
         <div>
 
-          
-
-
-            <select id="country" name="country">
-              <option value="australia">Australia</option>
-              <option value="canada">Canada</option>
-              <option value="usa">USA</option>
-            </select>
-          
-            <input class="button" type="submit" value="Submit">
+          <form>
+              <p class="fieldLabel"> Address </p>
+               <input type="text"  name="fname" placeholder="Address">
           </form>
-         </div>
+
+
+          <form>
+                <p class="fieldLabel"> City </p>
+                 <input type="text"  name="fname" placeholder="city">
+          </form> 
+
+
+          <form>
+                <p class="fieldLabel"> Zipcode </p>
+                 <input type="text"  name="fname" placeholder="zipcode">
+          </form>
+
+          <form>
+             <p class="fieldLabel"> Country </p>
+              <select class="dropdown" id="country" name="fname">
+                  <option value="canada">Canada</option>
+                  <option value="usa">USA</option>
+              </select>
+          </form>
+
+   
+        
+         
 
 
         <div class="creditCard">
@@ -55,10 +68,60 @@
                  <input type="text" class="creditCardInput" name="fname" placeholder="222"><br>
             </form>-->
 
+         </div>
 
-        <div>
+        </div>
+               
+
+
+
+     <div>
+        <table class="checkoutTable">
+          <tr>
+            <th>
+              <span class="product">Product</span>
+            <img style="position: absolute; top:770px; right:860px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >
+
+            
+
+            </th>
+
+            <th>
+              <span class="quantity">Quantity</span>
+                <form>
+                   <select class="selectQuantity" id="country" name="fname">
+                      <option value="number">1</option>
+                      <option value="number">2</option>
+                      <option value="number">3</option>
+                      <option value="number">4</option>
+                      <option value="number">5</option>
+                      <option value="number">6</option>
+                     </select>
+                 </form>
+            </th>
+
+              <th>
+              <span class="total">Total</span><br>
+                <span class="totalPrice">$40CAD</span>
+            </th>
+
+          </tr>
+        </table>
+      </div>
+
+
+
+       
+            
+             
+            <input type="submit" class="button buttonBlue">
+
+  </div>
 
    </section>
+
+
+<!--<input type="submit" class="button buttonBlue">-->
 
 
 
