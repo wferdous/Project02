@@ -511,23 +511,31 @@ img{
 
 .floatingButton{
   
-  position:absolute
+  position:relative;
 
   width: 100%;
   border-radius: 54;
-
+  fill: #FFEB3B;
   border: 0px solid black;
-
-  
-  top: 12rem;
+  border-radius: 3px;
+  top: 2rem;
   z-index: 5;
-
+  right: 2rem;
   
-
-
  
-  
 }
+
+
+.addfloatingButton{
+
+ top: 6rem;
+ z-index: 5;
+right: 31rem;
+
+}
+
+
+
 
 
 .checkoutCard{
