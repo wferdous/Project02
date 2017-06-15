@@ -561,27 +561,13 @@ img{
 
   width: 100%;
   border-radius: 54;
-  fill: #FFEB3B;
+  color: red;
   border: 0px solid black;
   border-radius: 3px;
-  top: 2rem;
-  z-index: 5;
-  right: 2rem;
-  
+  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
  
+  
 }
-
-
-.addfloatingButton{
-
- top: 6rem;
- z-index: 5;
-right: 31rem;
-
-}
-
-
-
 
 
 .checkoutCard{
