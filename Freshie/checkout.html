@@ -11,41 +11,47 @@
 
 <body>
 	<section>
-		<div class="checkoutCard">
+	
 
-    <h2 class="shippingAddress">Checkout</h2>
+    <h1 >Shopping Cart</h1>
 
-        <div>
+  
+      <div class="shippingForm">
 
-          <form>
-              <p class="fieldLabel"> Address </p>
-               <input type="text"  name="fname" placeholder="Address">
-          </form>
+            <form >
+              <div class="shipping">
+                <p class="fieldLabel"> Address </p>
+                <input type="text" name="fname" placeholder="Your Address" style="width: 300">
+              </div>
 
-
-          <form>
+              <div class="shipping">
                 <p class="fieldLabel"> City </p>
-                 <input type="text"  name="fname" placeholder="city">
-          </form> 
-
-
-          <form>
+                <input type="text"   name="fname" placeholder="Enter city">
+                </div>
+    
+              <div class="shipping">
                 <p class="fieldLabel"> Zipcode </p>
-                 <input type="text"  name="fname" placeholder="zipcode">
-          </form>
+                 <input type="text"   name="fname" placeholder=" Enter zip/postal code">
+                 </div>
 
-          <form>
-             <p class="fieldLabel"> Country </p>
-              <select class="dropdown" id="country" name="fname">
-                  <option value="canada">Canada</option>
-                  <option value="usa">USA</option>
-              </select>
-          </form>
 
+              <div class="shipping">
+                <p class="fieldLabel"> Country </p>
+                 <select class="dropdown" id="country" name="fname">
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                 </select>
+                 </div>
+        
+            </form> 
+
+        
+          
+      </div>
    
         
          
-
+  <div class="checkoutCard">
 
         <div class="creditCard">
         	<form>
@@ -70,7 +76,7 @@
 
          </div>
 
-        </div>
+        
                
 
 
@@ -80,15 +86,16 @@
           <tr>
             <th>
               <span class="product">Product</span>
-            <img style="position: absolute; top:770px; right:860px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >
+            <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >
 
             
 
             </th>
 
-            <th>
+           <th>
               <span class="quantity">Quantity</span>
-                <form>
+            </th>
+              <!--  <form>
                    <select class="selectQuantity" id="country" name="fname">
                       <option value="number">1</option>
                       <option value="number">2</option>
@@ -97,25 +104,57 @@
                       <option value="number">5</option>
                       <option value="number">6</option>
                      </select>
-                 </form>
-            </th>
-
-              <th>
-              <span class="total">Total</span><br>
-                <span class="totalPrice">$40CAD</span>
+                 </form> -->
+          
+            <th>
+              <span class="total">Total Price</span><br>
             </th>
 
           </tr>
         </table>
+
       </div>
 
 
+<div>
+        <table class="checkoutTable">
+          <tr>
+            <th>
+             
+            <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >
 
+            
+
+            </th>
+
+           <th>
+                 <form>
+                   <select class="selectQuantity" id="country" name="fname">
+                      <option value="number">1</option>
+                      <option value="number">2</option>
+                      <option value="number">3</option>
+                      <option value="number">4</option>
+                      <option value="number">5</option>
+                      <option value="number">6</option>
+                     </select>
+                 </form> 
+              </th>
+
+          
+            <th>
+              <span class="totalPrice">$40CAD</span>
+            </th>
+
+          </tr>
+        </table>
+        
+      </div>
        
             
              
             <input type="submit" class="button buttonBlue">
 
+  </div>
   </div>
 
    </section>

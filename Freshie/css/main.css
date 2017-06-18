@@ -258,8 +258,8 @@ section{
 .buttonBlue{
  border: 2px solid #2196F3;
  color:#2196F3;
-margin-left: 37.5rem;
-margin-top: 12rem;
+margin-left: 33rem;
+margin-top: 11rem;
 margin-bottom: 5rem;
 
 
@@ -370,7 +370,7 @@ input.creditCardInput::placeholder{
 
 .fieldLabel{
   display:block;
-  color:black;
+  color:rgb(244,81,30);
   margin-left: 1rem;
   margin-bottom:0rem;
   margin-top:1rem;
@@ -584,8 +584,9 @@ img{
 .checkoutTable{
 
 float: right;
-margin-right: 25rem;
-margin-top: 6rem;
+margin-right: 19rem;
+margin-top: 0rem;
+
 }
 
 .product{
@@ -612,6 +613,7 @@ margin-right: 0.5rem;
 margin-right: 0.5rem;
  margin-left: 2rem;
  font-weight: normal;
+ margin-top: 4rem;
 }
 
 
@@ -650,14 +652,17 @@ right: 31rem;
 .checkoutCard{
   
   position:relative;
-  margin:1 rem;
+ 
+  margin-top: 10rem;
+  margin-left: 4rem;
+   margin-right: 4rem;
   padding-top: 0rem;
   padding-right: 0rem;
   padding-left: 1rem;
   padding-bottom: 0rem;
 
-  width: 100%;
-  min-height: 800px;
+  width: 90%;
+  height: 600px;
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
@@ -681,7 +686,7 @@ right: 31rem;
   border-radius: 15px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
 
-  top:70px;
+  top:-70px;
   margin: auto;
 }
 
@@ -741,6 +746,7 @@ right: 31rem;
 .shippingAddress{
 
   padding-top: 4rem;
+  margin-left: 2rem;
   
 }
 
@@ -787,8 +793,36 @@ right: 31rem;
   text-transform:uppercase;
   text-align: center;
   margin-left: 2rem;
+
   
- 
 
 }
+
+
+.shippingForm{
+width: 100%;
+}
+
+
+@media (max-width: 30em){
+  .shippingForm{
+    width: 30%;
+
+  }
+}
+
+
+.shipping{
+  display: inline-block;
+  
+ margin-left: 4rem;
+   /*margin-bottom:0rem;
+  margin-top:1rem;
+  font-size: 0.6rem*/
+}
+
+
+
+
+
 
