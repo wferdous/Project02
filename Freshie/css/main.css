@@ -255,7 +255,16 @@ section{
   color:white;
 }
 
+.buttonBlue{
+ border: 2px solid #2196F3;
+ color:#2196F3;
+margin-left: 37.5rem;
+margin-top: 12rem;
+margin-bottom: 5rem;
 
+
+
+}
 
 input{
   border: 1px solid black;
@@ -361,7 +370,7 @@ input.creditCardInput::placeholder{
 
 .fieldLabel{
   display:block;
-  color:blue;
+  color:black;
   margin-left: 1rem;
   margin-bottom:0rem;
   margin-top:1rem;
@@ -570,6 +579,45 @@ img{
   }
 }
 
+
+
+.checkoutTable{
+
+float: right;
+margin-right: 25rem;
+margin-top: 6rem;
+}
+
+.product{
+  margin-right: 10rem;
+}
+
+
+
+.quantity{
+
+  margin-right: 9rem;
+  margin-left: 1rem;
+}
+
+
+
+.total{
+margin-right: 0.5rem;
+ margin-left: 2rem;
+}
+
+.totalPrice{
+
+margin-right: 0.5rem;
+ margin-left: 2rem;
+ font-weight: normal;
+}
+
+
+
+
+
 .floatingButton{
   
   position:relative;
@@ -633,7 +681,7 @@ right: 31rem;
   border-radius: 15px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
 
-  top:260px;
+  top:70px;
   margin: auto;
 }
 
@@ -687,5 +735,60 @@ right: 31rem;
   .registerForm{
     display: none;
   }
+}
+
+
+.shippingAddress{
+
+  padding-top: 4rem;
+  
+}
+
+.dropdown{
+  background-color: rgba(244,81,30,0);
+  color: rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  
+  border: 1px solid rgba(0,0,0,0.3);
+  margin-top: 5px;
+  
+  padding: 15px;
+  padding-bottom:15px;
+  padding-right:30px;
+  padding-left:30px;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform:uppercase;
+  text-align: center;
+  margin-left: 1rem;
+
+}
+
+.selectQuantity{
+  background-color: rgba(244,81,30,0);
+  color: rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  
+  border: 1px solid rgba(0,0,0,0.3);
+ 
+
+
+  
+  padding: 15px;
+  padding-bottom:15px;
+  padding-right:30px;
+  padding-left:30px;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform:uppercase;
+  text-align: center;
+  margin-left: 2rem;
+  
+ 
+
 }
 
