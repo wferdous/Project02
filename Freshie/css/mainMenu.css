@@ -94,7 +94,7 @@
 	right:50px;
 	width:30%;
 	height:65%;
-	background-color: #757575;
+	background-color: #9E9E9E; /*#2196F3*/
 	box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
 	border-radius: 3px;
 }
@@ -212,5 +212,69 @@
 
 
 
+.sideNav{
+	position: fixed;
+	right:0;
+	top:100px;
+	/*background-color: red;*/
+	width:130px;
+	height:600px;
+}
 
+.sideNav a{
+	height:120px;
+	width:20px;
+	display:block;
+	color:rgba(0,0,0,0.3);
+	text-align: left;
+	transform: rotate(90deg);
+	font-weight: 900;
+	text-decoration: none;
+	transition: all .55s ease-in;
+}
+
+
+.menuItem1{
+	position:fixed;
+	top:70px;
+}
+
+.menuItem2{
+	position:fixed;
+	top:150px;
+}
+
+.menuItem3{
+	position:fixed;
+	top:250px;
+}
+
+.menuItem4{
+	position:fixed;
+	top:340px;
+}
+
+.menuItem5{
+	position:fixed;
+	top:410px;
+}
+
+
+
+/*.sideNav a[ id= "what" ]:target ~ #what {
+    transform: translateY( 0px );
+}
+
+.sideNav a[ id= "updates" ]:target ~ #updates {
+    transform: translateY( -500px );
+}
+.sideNav a[ id= "where" ]:target ~ #where {
+    transform: translateY( -1000px );
+}
+.sideNav a[ id= "how" ]:target ~ #how {
+    transform: translateY( -1000px );
+}
+.sideNav a[ id= "bundless" ]:target ~ #bundless {
+    transform: translateY( -1000px );
+}*/
 

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>MainMenu</title>
+		<title>Freshie - Home</title>
 		<meta charset="utf-8">
 
 		<link href="../css/normalize.css" rel="stylesheet">
@@ -47,6 +47,12 @@
 
 
 	<script>
+
+
+	var contentBlockHeight = 200;
+	var scrollNow = true;
+	var scrollToPx=0;
+
 		function openMenu(){
 			// document.getElementById("mainMenu").style.pointer-events="none";
 			// document.getElementById("mainMenuOpened").style.opacity="1";
@@ -101,7 +107,9 @@
 
 			for (var i = 0; i < count; i++) {
 				var element = contentBlocks[i];
-				element.style.height=(window.innerHeight/100*80)+"px";
+				contentBlockHeight = window.innerHeight/100*80;
+				element.style.height=contentBlockHeight+"px";
+				element.style.width=(window.innerWidth-150)+"px";
 			}
 
 
@@ -114,12 +122,143 @@
 		};
 
 
+
+		// function scrollTo(whereTo){
+			
+		// 	if(whereTo == "what"){
+		// 		// console.log(getScrollPosition());
+		// 		scrollNow=true;
+		// 		scrollToPx = 0;
+		// 		// console.log(scrollToPx);
+		// 		// console.log(getScrollPosition());
+
+		// 		// window.scroll(0,200);
+
+		// 		// window.scroll(0,300);
+
+		// 		// window.scroll(0,400);
+
+		// 		//scrollToPx<=getScrollPosition()
+
+
+		// 		// window.scrollBy({ top: 100, left: 0, behavior: 'smooth' });
+
+		// 		document.querySelector('#how').scrollIntoView();
+
+		// 		// window.scroll({ 
+		// 		//   top: 500, // could be negative value
+		// 		//   left: 0, 
+		// 		//   behavior: 'smooth' 
+		// 		// });
+
+		// 		// setTimeout(function (){
+
+		// 		// for(var i=0; i<(getScrollPosition()-scrollToPx) ;){
+		// 		// 	console.log("scrolling");
+		// 		// 	console.log(scrollToPx);
+		// 			// var number = getScrollPosition()-1;
+		// 			// console.log(number);
+
+					
+		// 			// smoothscroll();
+  // 						// window.scroll(0,number);
+
+					
+					
+		// 		// }
+		// 		// }, 0);
+
+				
+		// 		// while(scrollToPx<=getScrollPosition()){
+					
+		// 		// }
+
+		// 		// setTimeout(function() {
+		// 		// 	console.log("read it");
+		// 		//     
+		// 		// }, 1000);
+		// 	}
+
+
+
+
+		// 	function smoothscroll(){
+		// 	    var currentScroll = getScrollPosition();
+		// 	    if (currentScroll > 0) {
+		// 	         window.requestAnimationFrame(smoothscroll);
+		// 	         window.scroll (0,getScrollPosition());
+		// 	    }
+		// 	}
+
+
+
+		// 	if(whereTo == "updates"){
+		// 		// console.log(whereTo);
+		// 		scrollNow=true;
+		// 		scrollToPx = 200;
+		// 	}
+		// }
+
+		// console.log(scrollNow);
+
+		// if(scrollNow){
+
+		// 	if(scrollToPx<=getScrollPosition()){
+
+		// 		window.scrollTo(0,getScrollPosition()-50);
+		// 	}else{
+		// 		scrollNow=false;
+		// 	}
+		// }
+
+
+		// function getScrollPosition(){
+		// 	return document.getElementsByTagName("BODY")[0].scrollTop
+		// }
+
+			
+
+
+
 	</script>
 
 
 
+	<nav class="sideNav">
+		<!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
+		<a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
+		<a class="menuItem3">WHERE</a>
+		<a class="menuItem4">HOW</a>
+		<a class="menuItem5">BUNDLES</a> -->
 
-	<div class="contentBlock">
+		<a href="#what" class="menuItem1" onClick="scrollTo('what')">WHAT</a>
+		<a href="#updates" class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
+		<a href="#where" class="menuItem3">WHERE</a>
+		<a href="#how" class="menuItem4">HOW</a>
+		<a href="#bundles" class="menuItem5">BUNDLES</a>
+
+
+
+	</nav>
+
+
+
+
+
+
+
+
+	<div id="what" class="contentBlock">
+		<h1>Freshie</h1>
+		<p class="paragraph"> This is a placeholder paragraph. </p>
+
+	</div>
+
+
+
+
+
+	<div id="updates" class="contentBlock">
 		<h1>Updates</h1>
 		<p class="paragraph"> This is a placeholder paragraph. </p>
 
@@ -129,8 +268,8 @@
 
 
 
-	<div class="contentBlock">
-		<h1>Updates</h1>
+	<div id="where" class="contentBlock">
+		<h1>Where is our Fruits from</h1>
 		<p class="paragraph"> This is a placeholder paragraph. </p>
 
 	</div>
@@ -139,8 +278,8 @@
 
 
 
-	<div class="contentBlock">
-		<h1>Updates</h1>
+	<div id="how" class="contentBlock">
+		<h1>How we deliver</h1>
 		<p class="paragraph"> This is a placeholder paragraph. </p>
 
 	</div>
@@ -149,8 +288,8 @@
 
 
 
-	<div class="contentBlock">
-		<h1>Updates</h1>
+	<div id="bundles" class="contentBlock">
+		<h1>Bundles</h1>
 		<p class="paragraph"> This is a placeholder paragraph. </p>
 
 	</div>
@@ -158,17 +297,9 @@
 
 
 
-
-	<div class="contentBlock">
-		<h1>Updates</h1>
-		<p class="paragraph"> This is a placeholder paragraph. </p>
-
-	</div>
-
-
-
-
-
+<script>
+	
+</script>
 
 	
 
