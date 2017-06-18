@@ -225,12 +225,18 @@
 	height:120px;
 	width:20px;
 	display:block;
-	color:rgba(0,0,0,0.3);
+	/*color:rgba(0,0,0,0.3);*/
+	color:rgba(244,81,30,0.5);
 	text-align: left;
 	transform: rotate(90deg);
 	font-weight: 900;
 	text-decoration: none;
-	transition: all .55s ease-in;
+	transition: all .4s ease-in;
+
+}
+
+.sideNav a:hover{
+	color:rgba(244,81,30,1);
 }
 
 
