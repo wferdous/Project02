@@ -114,6 +114,15 @@ p{
 }
 
 
+@media (max-width: 41em){
+  .paragraph{
+    width:70%;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+
+
 section{
   margin-top:0rem;
   margin-bottom:0rem;
@@ -763,12 +772,42 @@ margin-right: 0.5rem;
 .logInBlock01{
    width:50%;
   background-color: #2196F3;
+  padding-bottom:2rem;
 }
 
 .logInBlock02{
    width:50%;
   background-color: #EF6C00;
+  padding-bottom:2rem;
 }
+
+
+@media (max-width: 50em){
+  .logInBlock01{
+    width:100%;
+  }
+  .logInBlock02{
+    width:100%;
+  }
+}
+
+
+
+
+
+
+#logInBlockTitle01{
+  color:white;
+}
+
+
+#logInBlockTitle02{
+  color:white;
+}
+
+
+
+
 
 
 .registerForm{
@@ -777,11 +816,7 @@ margin-right: 0.5rem;
 }
 
 
-@media (max-width: 50em){
-  .registerForm{
-    display: none;
-  }
-}
+
 
 
 .shippingAddress{

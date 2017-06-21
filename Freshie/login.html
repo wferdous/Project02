@@ -13,7 +13,7 @@
 
 		<div class="logInBlock logInBlock01">
 			
-			<h1 id="logInBlockTitle01" onClick="openUp1()">Sign In</h1>
+			<h1 id="logInBlockTitle01">Sign In</h1>
 
 			<form class="registerForm">
 			<p class="fieldLabelDark"> Email </p>
@@ -29,7 +29,7 @@
 
 		<div class="logInBlock logInBlock02">
 		
-			<h1 id="logInBlockTitle02" onClick="openUp2()">Sign Up</h1>
+			<h1 id="logInBlockTitle02">Sign Up</h1>
 
 			<form class="registerForm">
 			<p class="fieldLabelDark"> First Name </p>
@@ -65,132 +65,31 @@
 
 
 
-		var state=-1;
-
-
-
-
-
-		function openUp1(){
-			console.log("hey");
-			if(state==0){
-
-				var logInBlock02 = document.getElementsByClassName('logInBlock02');
-	    		var count = logInBlock02.length;
-
-				for (var i = 0; i < count; i++) {
-					var element = logInBlock02[i];
-					element.style.width="50px";
-
-					
-				}
-				document.getElementById("logInBlockTitle02").style.fontSize="0.8rem";
-
-
-				var logInBlockTitle01 = document.getElementById("logInBlockTitle01");
-
-				logInBlockTitle01.style.top="0rem";
-				logInBlockTitle01.style.fontSize="3rem";
-				logInBlockTitle01.style.left="1rem";
-				logInBlockTitle01.style.paddingLeft="1rem";
-				logInBlockTitle01.style.paddingTop=0+"px";
-
-
-
-
-				var logInBlock01 = document.getElementsByClassName('logInBlock01');
-	    		var count = logInBlock01.length;
-
-				for (var i = 0; i < count; i++) {
-					var element = logInBlock01[i];
-					element.style.width=window.innerWidth-50+"px";
-				}
-
-
-			}
-		}
-
-		function openUp2(){
-			if(state==0){
-				var logInBlock01 = document.getElementsByClassName('logInBlock01');
-	    		var count = logInBlock01.length;
-
-				for (var i = 0; i < count; i++) {
-					var element = logInBlock01[i];
-					element.style.width="50px";
-				}
-
-				document.getElementById("logInBlockTitle01").style.fontSize="0.8rem";
-
-
-				var logInBlockTitle02 = document.getElementById("logInBlockTitle02");
-
-				logInBlockTitle02.style.top="0rem";
-				logInBlockTitle02.style.fontSize="3rem";
-				logInBlockTitle02.style.left="1rem";
-				logInBlockTitle02.style.paddingLeft="1rem";
-				logInBlockTitle02.style.paddingTop=0+"px";
-
-
-
-
-
-				var logInBlock02 = document.getElementsByClassName('logInBlock02');
-	    		var count = logInBlock02.length;
-
-				for (var i = 0; i < count; i++) {
-					var element = logInBlock02[i];
-					element.style.width=window.innerWidth-50+"px";
-				}
-				
-			}
-		}
-		
-
-
 		function onLoad(){
 
-						
+
 			
 
+			
+		
+			
 			var logInBlocks = document.getElementsByClassName('logInBlock');
     		var count = logInBlocks.length;
 
 			for (var i = 0; i < count; i++) {
 				var element = logInBlocks[i];
-				element.style.height=(window.innerHeight)+"px";
-			}
-
-
-			
-
-			var h1s = document.getElementsByTagName("H1");
-    		var count = h1s.length;
-
-			for (var i = 0; i < count; i++) {
-				var element = h1s[i];
-				if(window.innerWidth<800) {
-					state=0;
-
-					element.style.top="8rem";
-					element.style.fontSize="1.4rem";
-					element.style.paddingLeft="1rem";
-					element.style.paddingRight="1rem";
-					element.style.paddingTop=window.innerHeight/2-50+"px";
-				}else{
-					state=-1;
-					element.style.top="0rem";
-					element.style.fontSize="5rem";
-					element.style.left="1rem";
-					element.style.paddingLeft="4rem";
-					element.style.paddingTop=0+"px";
+				element.style.minHeight=(window.innerHeight)+"px";
+				if(window.innerWidth<(50*16)){
+				element.style.minHeight="auto";
 				}
+
 			}
+
 			
-
-
 			
 		}
+
+
 
 		window.onresize = function(event) {
     		onLoad();

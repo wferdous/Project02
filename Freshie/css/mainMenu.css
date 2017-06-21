@@ -37,12 +37,14 @@
 
 	display: none;
 	opacity:1;
+	z-index:50;
 }
 
 
 #mainMenuOpened * {
 	position: fixed;
 	display: none;
+	z-index:50;
 }
 
 
@@ -167,6 +169,16 @@
 }
 
 
+.blankA{
+	font-weight: 900;
+ color: rgba(244,81,30,0.6);
+  font-size: 5rem;
+  text-align: left;
+  padding-left:4rem;
+  margin-bottom:1rem;
+}
+
+
 @media (max-width: 45em){
 	.cart{
 		width:80%;
@@ -219,6 +231,14 @@
 	/*background-color: red;*/
 	width:130px;
 	height:600px;
+	z-index:0;
+}
+
+
+@media (max-width: 37em){
+	.sideNav{
+		display:none;
+	}
 }
 
 .sideNav a{
