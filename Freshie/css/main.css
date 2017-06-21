@@ -446,8 +446,12 @@ input.creditCardInput::placeholder{
 @media (max-width: 30em){
   .productListing{
     padding-bottom: 2rem;
+
   }
 }
+
+
+
 
 
 
@@ -457,17 +461,24 @@ input.creditCardInput::placeholder{
   height:90px;
 }
 
+
+
 .title{
   float:left;
   font-size: 3rem;
   text-transform: uppercase;
-
-
 }
+
+
+
+
+
+
+
 
 .description{
   margin-top:6rem;
-  margin-left:  0.rem;
+  margin-left:  0;
   font-size: 0.8rem;
   margin-left: 0.5rem;
   width: 40%;
@@ -475,9 +486,12 @@ input.creditCardInput::placeholder{
 
 @media (max-width: 30em){
   .description{
+    padding-top: 20rem;
     width: 90%;
   }
 }
+
+
 
 
 table, th, td{
@@ -626,7 +640,7 @@ margin-right: 0.5rem;
 
 .totalPrice{
 
-margin-right: 0.5rem;
+ margin-right: 0.5rem;
  margin-left: 2rem;
  font-weight: normal;
  margin-top: 4rem;
@@ -635,31 +649,40 @@ margin-right: 0.5rem;
 
 
 
-
 .floatingButton{
   
-  position:relative;
+  position:fixed;
 
-  width: 100%;
+  
   border-radius: 54;
   fill: rgba(244,81,30,1);
   border: 0px solid black;
   border-radius: 3px;
-  top: 2rem;
-  z-index: 5;
-  right: 2rem;
 
+  z-index: 5;
   
+  width: 54px;
+  height: 54px;
+  top:260px; 
+  right:680px;
+
+
  
 }
 
 
-.addfloatingButton{
 
- top: 6rem;
- z-index: 5;
-right: 38.4rem;
 
+
+
+@media (max-width: 30em){
+  .floatingButton{
+
+  right: 10px;
+  z-index: 10;
+
+
+}
 }
 
 
@@ -890,7 +913,38 @@ width: 100%;
   background-image: url('../img/bundle/bundle1.jpeg');
   background-size: cover;
   background-position: center;
-  width: 700;
+  width: 700px;
   float: right;
 }
+
+
+
+@media (max-width: 60em){
+  .bundle1{
+    width: 70%;
+  }
+}
+
+
+
+@media (max-width: 60em){
+  .contentBlock.bundle {
+  width:80%;
+  height:400px;
+
+
+}
+}
+
+
+
+@media (max-width: 30em){
+  .contentBlock.bundle {
+  max-width:100%;
+  height:300px;
+
+
+}
+}
+
 
