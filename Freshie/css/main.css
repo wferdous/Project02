@@ -803,6 +803,7 @@ top: 25px;
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+  background-color: white;
 }
 
 
@@ -1170,6 +1171,44 @@ width: 100%;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
 }
+
+
+
+
+
+
+  width: 90%;
+  height: 160px;
+  border: 0px solid black;
+  border-radius: 3px;
+  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+  background-color: white;
+}
+
+
+
+
+
+.reviewName{
+  font-weight: 900;
+  color:rgba(0,0,0,0.78);
+  font-size: 1rem;
+  
+  padding-top: 2.5rem;
+
+}
+
+
+.reviewP{
+ font-family: 'Roboto', sans-serif;
+  font-size: 0.8rem;
+
+  width: 100%;
+  margin-left: 6.2rem;
+  padding-top: 1rem;
+
+}
+
 
 
 
