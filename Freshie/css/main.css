@@ -103,7 +103,7 @@ p{
   background-color:white;
 
   /*background-color:#2196F3;*/
-  padding:20px;
+  padding: 20px;
   border-radius: 3px;
   box-shadow: 0 0px 4px 0 rgba(0,0,0,0.3) !important;
 
@@ -114,10 +114,21 @@ p{
 }
 
 
+.buttonIndex{
+  margin-left:4rem;
+}
+
+
 @media (max-width: 41em){
   .paragraph{
     width:70%;
     margin-left:auto;
+    margin-right:auto;
+  }
+
+  .buttonIndex{
+    /*width:60%;*/
+    margin-left:4rem;
     margin-right:auto;
   }
 }
@@ -273,6 +284,7 @@ section{
   font-weight: 900;
   text-transform:uppercase;
   text-align: center;
+  text-decoration: none;
 }
 
 .buttonWhite{
