@@ -16,11 +16,15 @@
     <h1 >Shopping Cart</h1>
 
   
+      <div class="profileCard">
+  <div class="addressCard"> 
+  <img class="profileIcon" src="img/icons/shoppingCart.svg" alt="add"></div>
+
       <div class="shippingForm">
 
             <form >
               <div class="shipping">
-                <p class="fieldLabel"> Address </p>
+                <p class="fieldLabel"> Shipping Address </p>
                 <input type="text" name="fname" placeholder="Your Address" style="width: 300">
               </div>
 
@@ -31,7 +35,7 @@
     
               <div class="shipping">
                 <p class="fieldLabel"> Zipcode </p>
-                 <input type="text"   name="fname" placeholder=" Enter zip/postal code">
+                 <input type="text"   name="fname" placeholder="Enter zip/postal code">
                  </div>
 
 
@@ -44,12 +48,13 @@
                  </div>
         
             </form> 
-
-        
-          
+           </div>
       </div>
-   
         
+
+
+
+
          
   <div class="checkoutCard">
 
@@ -85,8 +90,8 @@
         <table class="checkoutTable">
           <tr>
             <th>
-              <span class="product">Product</span>
-            <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >
+              <span class="product">Bundle</span>
+           <!-- <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >-->
 
             
 
@@ -107,6 +112,11 @@
                  </form> -->
           
             <th>
+              <span class="frequency">Frequency</span><br>
+            </th>
+
+
+            <th>
               <span class="total">Total Price</span><br>
             </th>
 
@@ -116,6 +126,61 @@
       </div>
 
 
+
+<br>
+
+  <div>
+        <table class="checkoutDetailsTable">
+          <tr>
+            <th>
+              <span class="product">Bundle</span>
+           <!-- <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >-->
+
+            
+
+
+            </th>
+
+           <th>
+              <span class="quantity">Quantity</span>
+            </th>
+              <!--  <form>
+                   <select class="selectQuantity" id="country" name="fname">
+                      <option value="number">1</option>
+                      <option value="number">2</option>
+                      <option value="number">3</option>
+                      <option value="number">4</option>
+                      <option value="number">5</option>
+                      <option value="number">6</option>
+                     </select>
+                 </form> -->
+          
+           <th>
+                 <form>
+                   <select class="selectFrequency" id="country" name="fname">
+                      <option value="number">Weekly</option>
+                      <option value="number">Bi-Weekly</option>
+                      <option value="number">Bi- Monthly</option>
+                      <option value="number">Monthly</option>
+                    
+                     </select>
+                 </form> 
+              </th>
+
+
+
+            <th>
+              <span class="totalPrice">$41 CAD</span><br>
+            </th>
+
+          </tr>
+        </table>
+
+      </div>
+
+
+
+<!--
 <div>
         <table class="checkoutTable">
           <tr>
@@ -154,13 +219,16 @@
              
             <input type="submit" class="button buttonBlue">
 
-  </div>
+  </div>-->
+
+
+  <input type="submit" class="button buttonBlue" value="order">
   </div>
 
    </section>
 
 
-<!--<input type="submit" class="button buttonBlue">-->
+
 
 
 
