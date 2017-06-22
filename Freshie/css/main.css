@@ -297,7 +297,7 @@ section{
  border: 2px solid #2196F3;
  color:#2196F3;
 margin-left: 33rem;
-margin-top: 11rem;
+margin-top: 6rem;
 margin-bottom: 5rem;
 
 
@@ -638,30 +638,50 @@ img{
 
 .checkoutTable{
 
-float: right;
-margin-right: 19rem;
-margin-top: 0rem;
+margin: auto;
+margin-top: 4rem;
 
 }
 
+
+.checkoutDetailsTable{
+
+margin: auto;
+margin-top: 4rem;
+
+}
+
+
+
 .product{
-  margin-right: 10rem;
+margin-right: 4rem;
+  margin-left: 4rem;
 }
 
 
 
 .quantity{
 
-  margin-right: 9rem;
-  margin-left: 1rem;
+  margin-right: 4rem;
+  margin-left: 4rem;
+}
+
+
+.frequency{
+
+  margin-right: 4rem;
+  margin-left: 4rem;
 }
 
 
 
 .total{
-margin-right: 0.5rem;
- margin-left: 2rem;
+margin-right: 4rem;
+  margin-left: 4rem;
 }
+
+
+
 
 .totalPrice{
 
@@ -784,6 +804,7 @@ top: 25px;
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
+  background-color: white;
 }
 
 .checkoutCard{
@@ -801,7 +822,7 @@ top: 25px;
   background-color:white;
 
   width: 90%;
-  height: 600px;
+  height: 700px;
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
@@ -1025,12 +1046,42 @@ top: 25px;
   font-weight: 900;
   text-transform:uppercase;
   text-align: center;
-  margin-left: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 
   
 
 }
 
+
+
+
+.selectFrequency{
+  background-color: rgba(244,81,30,0);
+  color: rgba(0,0,0,0.3);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+  
+  border: 1px solid rgba(0,0,0,0.3);
+ 
+
+
+  
+  padding: 15px;
+  padding-bottom:15px;
+  padding-right:30px;
+  padding-left:30px;
+  font-size: 1rem;
+  font-weight: 900;
+  text-transform:uppercase;
+  text-align: center;
+  margin-left: 4rem;
+  margin-right: 4rem;
+
+  
+
+}
 
 .shippingForm{
 width: 100%;
