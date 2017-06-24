@@ -111,8 +111,29 @@ p{
 
   /*color: rgba(255,255,255,1);
   background-color:rgba(244,81,30,1);*/
-
 }
+
+
+.whiteCard{
+  width:700px;
+  margin:4rem;
+  /*margin-top:0rem;*/
+  /*font-size:1rem;*/
+  /*color: rgba(0,0,0,0.6);*/
+  /*color:white;*/
+  background-color:white;
+
+  /*background-color:#2196F3;*/
+  padding: 20px;
+  border-radius: 3px;
+  box-shadow: 0 0px 4px 0 rgba(0,0,0,0.3) !important;
+
+
+  /*color: rgba(255,255,255,1);
+  background-color:rgba(244,81,30,1);*/
+}
+
+
 
 
 .buttonIndex{
@@ -275,7 +296,8 @@ section{
   font-weight: 400;
   
   border: 2px solid rgb(244,81,30);
-  margin-top: 5px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   
   padding: 15px;
   padding-bottom:15px;
@@ -408,11 +430,14 @@ input.creditCardInput::placeholder{
 
 .fieldLabel{
   display:block;
-  color:rgb(244,81,30);
+  /*color:rgb(244,81,30);*/
+  color:#2196F3;
   margin-left: 1rem;
   margin-bottom:0rem;
   margin-top:1rem;
   font-size: 0.6rem
+  width:250px;
+  text-align: left;
 }
 
 
@@ -423,6 +448,8 @@ input.creditCardInput::placeholder{
   margin-bottom:0rem;
   margin-top:1rem;
   font-size: 0.6rem
+  width:250px;
+  text-align: left;
 }
 
 
@@ -949,14 +976,20 @@ top: 25px;
 
 
 .logInBlock01{
-   width:50%;
-  background-color: #2196F3;
+   width:100%;
+  /*background-color: #2196F3;*/
+  background-image: url('../img/logIn/SignIn.jpg');
+  background-size: cover;
+  background-position: center;
   padding-bottom:2rem;
 }
 
 .logInBlock02{
-   width:50%;
-  background-color: #EF6C00;
+   width:100%;
+  /*background-color: #EF6C00;*/
+  background-image: url('../img/logIn/SignUp.jpg');
+  background-size: cover;
+  background-position: center;
   padding-bottom:2rem;
 }
 
@@ -976,12 +1009,12 @@ top: 25px;
 
 
 #logInBlockTitle01{
-  color:white;
+  /*color:white;*/
 }
 
 
 #logInBlockTitle02{
-  color:white;
+  /*color:white;*/
 }
 
 
@@ -990,8 +1023,9 @@ top: 25px;
 
 
 .registerForm{
-  max-width:200px;
+  max-width:255px;
   margin:auto;
+  text-align: center;
 }
 
 
@@ -1393,28 +1427,4 @@ width: 100%;
 #lightGrey{
   /*background-color: #2196F3;*/
   background-color: #F1F2F2;
-}
-
-
-.thankyouCard{
-  
-  width: 300;
-  height: 300;
-  float: center;
- 
-  
-
-  margin-left: 6rem;
-  margin-right: 6rem;
-  padding-top: 4rem;
-  padding-right: 4rem;
-  
-  padding-bottom: 4rem;
-
-  width: 90%;
-  height: 300px;
-  border: 0px solid black;
-  border-radius: 3px;
-  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
-  background-color: white;
 }
