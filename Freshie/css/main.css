@@ -1428,27 +1428,3 @@ width: 100%;
   /*background-color: #2196F3;*/
   background-color: #F1F2F2;
 }
-
-
-.thankyouCard{
-  
-  width: 300;
-  height: 300;
-  float: center;
- 
-  
-
-  margin-left: 6rem;
-  margin-right: 6rem;
-  padding-top: 4rem;
-  padding-right: 4rem;
-  
-  padding-bottom: 4rem;
-
-  width: 90%;
-  height: 300px;
-  border: 0px solid black;
-  border-radius: 3px;
-  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
-  background-color: white;
-}
