@@ -1,0 +1,280 @@
+<html lang="en">
+
+
+<head>
+    <title>Review</title>
+      <meta charset="utf-8">
+ 
+       <link href="css/normalize.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/mainMenu.css" rel="stylesheet">
+
+</head>
+
+<body onload="onLoad()">
+
+    
+
+    
+
+
+    <img src="img/icons/menu.svg" class="menuIcon" width="90" height="90" onclick="openMenu()">
+    <img src="img/icons/menuWhite.svg" class="menuIconWhite" width="90" height="90" onclick="openMenu()">
+
+
+    <div class="mainMenu menuHide" id="mainMenuOpened">
+        <img src="img/icons/close.svg" class="closeIcon menuHide" width="90" height="90" onclick="closeMenu()">
+
+        <a class="menuHide menuButtonsLogIn" href="login.html"> SIGN IN / SIGN UP</a> 
+
+        <a class="menuHide menuButtonsMain menuButtonsMain01" href="index.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain01">  HOME  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain02" href="profile.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain02">  PROFILE  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain03" href="reviews.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain03">  REVIEWS  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain04" href="citations.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain04">  CITATIONS  </h1></a>
+
+
+        
+
+
+        <h2 class="menuHide contact contact01">
+            604-594-3948
+        </h2>
+
+        <h2 class="menuHide contact contact02">
+            contact_us@freshie.ca
+        </h2>
+
+
+        
+
+    </div>
+
+
+
+    <script>
+
+
+    var contentBlockHeight = 200;
+    var scrollNow = true;
+    var scrollToPx=0;
+
+        function openMenu(){
+            // document.getElementById("mainMenu").style.pointer-events="none";
+            // document.getElementById("mainMenuOpened").style.opacity="1";
+
+            var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="hidden";
+
+            var menuElements = document.getElementsByClassName('menuHide');
+            var count = menuElements.length;
+
+            for (var i = 0; i < count; i++) {
+                var element = menuElements[i];
+                element.style.display="block";
+            }
+
+
+        }
+
+
+
+        function closeMenu(){
+
+
+            var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
+
+
+            var menuElements = document.getElementsByClassName('menuHide');
+            var count = menuElements.length;
+
+            for (var i = 0; i < count; i++) {
+                var element = menuElements[i];
+                element.style.display="none";
+            }
+
+
+        }
+
+
+        function onLoad(){
+            // var vieportHeight = document.documentElement.clientHeight/clientWidth;
+
+            // document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
+            // document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+            document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
+
+            
+            
+            // if(window.innerWidth<=720){
+            //  document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
+            // }else{
+            //  document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
+            // }
+
+
+
+
+
+            //maybe needed?
+            var mobileBreakPoint = 37*16;
+
+            var contentBlocks = document.getElementsByClassName('contentBlockNoBG');
+            var count = contentBlocks.length;
+
+
+            for (var i = 0; i < count; i++) {
+                var element = contentBlocks[i];
+                contentBlockHeight = window.innerHeight/100*80;
+                // element.style.height=contentBlockHeight+"px";
+                
+
+                if (window.innerWidth<mobileBreakPoint){
+                    element.style.width=(window.innerWidth)+"px";
+                }else{
+                    element.style.width=(window.innerWidth-150)+"px";
+                }
+                
+            }
+
+
+
+
+            
+        }
+
+        window.onresize = function(event) {
+            onLoad();
+        };
+
+
+
+
+
+
+    </script>
+
+
+
+    <nav class="sideNav" id="sideNav">
+        <!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
+        <a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
+        <a class="menuItem3">WHERE</a>
+        <a class="menuItem4">HOW</a>
+        <a class="menuItem5">BUNDLES</a> -->
+
+        <a href="#write" class="menuItem1">WRITE</a>
+        <a href="#reviews" class="menuItem2" >REVIEWS</a>
+
+
+
+    </nav>
+
+
+
+
+
+
+
+    
+
+
+
+    <div class="contentBlockNoBG">
+
+        <h1>Reviews</h1>
+
+
+
+        <div class="contentBlockNoBGMarg">
+
+
+            <section id="write"> 
+                <textarea class="yourReview" rows="4" cols="50" placeholder="Write your review here..." ></textarea>
+
+                <form>
+                    <input type="submit" class="button" onclick="window.open('index.html')" >
+                </form>
+             </section>
+
+
+
+        	<section id="reviews">
+            
+                <div class="reviewCard">
+                    <img class="reviewIcon" src="img/icons/goodAccount.svg" alt="personIcon">
+                    <h4 class="reviewName">Johanne Charpentier</h4>
+                    <img class="rateIcon" src="img/icons/rate-01.png" alt="add">
+
+                    <div class="clear">
+                    </div>
+
+                    <br>
+                    <p class="reviewP">Very good website. I use it every month to get fresh and very nice fruits. The service is very helpful and the fruits are really fresh. I recommended to my friends.</p>
+                </div>
+
+
+                <div class="reviewCard">
+                    <img class="reviewIcon" src="img/icons/goodAccount.svg" alt="personIcon">
+                    <h4 class="reviewName">Karen Thwaites</h4>
+                    <img class="rateIcon" src="img/icons/rate-02.png" alt="add">
+                    
+                    <div class="clear">
+                    </div>
+
+                    <br>
+                    <p class="reviewP">Your website is very cool!</p>
+                </div>
+
+
+                <div class="reviewCard">
+                    <img class="reviewIcon" src="img/icons/goodAccount.svg" alt="personIcon">
+                    <h4 class="reviewName">Mark Smith</h4>
+                    <img class="rateIcon" src="img/icons/rate-01.png" alt="add">
+                    
+                    <div class="clear">
+                    </div>
+
+                    <br>
+
+                    <p class="reviewP">Too good!!! Just love it.</p>  
+                </div>
+
+
+                <div class="reviewCard">
+                   <img class="reviewIcon" src="img/icons/goodAccount.svg" alt="personIcon">
+                   <h4 class="reviewName">JStuart Gregory</h4>
+                   <img class="rateIcon" src="img/icons/rate-01.png" alt="add">
+                   
+                   <div class="clear">
+                    </div>
+
+                    <br>
+
+                   <p class="reviewP">This is just perfect!! Good Job Freshie</p>
+                </div>
+
+
+                <div class="reviewCard">
+                    <img class="reviewIcon" src="img/icons/goodAccount.svg" alt="personIcon">
+                    <h4 class="reviewName">Brook Davison</h4>
+                    <img class="rateIcon" src="img/icons/rate-02.png" alt="add">
+                    
+                    <div class="clear">
+                    </div>
+
+                    <br>
+
+                    <p class="reviewP">Its ok. Can be better!</p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </div>
+
+
+
+</body>
+</html>

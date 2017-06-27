@@ -14,6 +14,7 @@
 
   opacity:0.3;
   cursor: pointer;
+  z-index: 5;
 }
 
 
@@ -294,11 +295,7 @@
 	}
 
 
-	.contact{
-		top:20px;
-		left:30px;
-		font-size: 1rem;
-	}
+	
 }
 
 

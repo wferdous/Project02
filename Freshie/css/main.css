@@ -770,47 +770,46 @@ top: 25px;
 .reviewIcon{
 position: relative;
 float: left;
-margin-left: 2rem;
-margin-top: 2rem;
-padding-right: 2rem;
+/*padding:1rem;*/
+margin-left:5%;
+margin-right:5%;
+/*margin-left: 2rem;*/
+/*margin-right: 2rem;*//*
+margin-top: 2rem;*/
+width:10%;
+height:auto; 
+opacity:0.4;
+min-width:50px;
 
 }
 
 
 .rateIcon{
-
-float: left;
-
-margin-top: 1rem;
-}
-
-.writeReviewIcon{
-
-position: relative;
-right: 32px;
-top: 25px;
+  float: left;
+  /*width:50%;*/
+  max-width:100px;
+  margin-right:auto;
+  height:auto;
+  /*margin-top: 1rem;*/
 }
 
 
 
 
-.writeReviewCard{
-  float: right;
-  position:relative;
-  
-  margin-right: 2rem;
-  
-
-  width: 100px;
-  min-height: 100px;
-  background-color: #2196F3;
-  border: 0px solid black;
-  border-radius: 5px;
-  box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
-
-  
-  
+textarea{
+  padding:2rem;
+  resize:none;
 }
+
+
+textarea::placeholder{
+  color:black;
+}
+
+
+
+
+
 
 
 .reviewCard{
@@ -818,16 +817,21 @@ top: 25px;
   position:relative;
  
   margin-top: 1rem;
+  margin-bottom: 0;
+  margin-right: 0;
+  margin-left: 0;
 
-  margin-left: 4rem;
-  margin-right: 4rem;
+  width:100%;
+
   padding-top: 0rem;
   padding-right: 0rem;
   
   padding-bottom: 0rem;
+  padding-left: 0rem;
 
-  width: 90%;
-  height: 160px;
+  padding:2rem;
+
+  /*height: 160px;*/
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
@@ -963,6 +967,27 @@ top: 25px;
     transition: transform 0.6s ease-in-out;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;*/
+}
+
+body{
+  margin:0;
+  padding:0;
+}
+
+
+
+.contentBlockNoBG{
+  margin:0;
+  padding:0;
+
+  padding:2 0rem;
+  background-color: #F1F2F2;
+}
+
+
+.contentBlockNoBGMarg{
+  margin:0 4rem;
+  padding-bottom:2rem;
 }
 
 
@@ -1320,23 +1345,33 @@ width: 100%;
 
 
 .reviewName{
+  float:left;
+
+  width:80%;
   font-weight: 900;
   color:rgba(0,0,0,0.78);
   font-size: 1rem;
   
-  padding-top: 2.5rem;
+  /*padding-top: 2.5rem;*/
 
 }
 
 
 .reviewP{
+  position:relative;
  font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
 
   width: 100%;
-  margin-left: 6.2rem;
-  padding-top: 1rem;
+  margin:0;
+  /*margin-left: 6.2rem;*/
+  /*padding-top: 1rem;*/
 
+}
+
+
+.yourReview{
+  width:100%;
 }
 
 
