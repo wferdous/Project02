@@ -378,6 +378,12 @@
 }
 
 
+.menuItem2Address{
+	position:fixed;
+	top:140px;
+}
+
+
 
 
 
@@ -395,6 +401,12 @@
 }
 
 
+.menuItem3Payment{
+	position:fixed;
+	top:245px;
+}
+
+
 
 .menuItem4{
 	position:fixed;
@@ -406,6 +418,12 @@
 .menuItem4Bundle{
 	position:fixed;
 	top:400px;
+}
+
+
+.menuItem4Bundle{
+	position:fixed;
+	top:350px;
 }
 
 
