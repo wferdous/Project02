@@ -2,14 +2,184 @@
 
 <head>
     <title>Profile</title>
-      <meta charset="utf-8">
-        <link href="css/main.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/mainMenu.css" rel="stylesheet">
 </head>
 
-<body id="lightGrey">
+<body onload="onLoad()">
 
-     <h1 >Profile</h1>
-     <div class="profileBlock">
+
+
+    <img src="img/icons/menu.svg" class="menuIcon" width="90" height="90" onclick="openMenu()">
+    <img src="img/icons/menuWhite.svg" class="menuIconWhite" width="90" height="90" onclick="openMenu()">
+
+
+    <div class="mainMenu menuHide" id="mainMenuOpened">
+        <img src="img/icons/close.svg" class="closeIcon menuHide" width="90" height="90" onclick="closeMenu()">
+
+        <a class="menuHide menuButtonsLogIn" href="login.html"> SIGN IN / SIGN UP</a> 
+
+        <a class="menuHide menuButtonsMain menuButtonsMain01" href="index.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain01">  HOME  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain02" href="profile.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain02">  PROFILE  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain03" href="reviews.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain03">  REVIEWS  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain04" href="citations.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain04">  CITATIONS  </h1></a>
+
+
+        
+
+
+        <h2 class="menuHide contact contact01">
+            604-594-3948
+        </h2>
+
+        <h2 class="menuHide contact contact02">
+            contact_us@freshie.ca
+        </h2>
+
+
+        
+
+    </div>
+
+
+
+    <script>
+
+
+    var contentBlockHeight = 200;
+    var scrollNow = true;
+    var scrollToPx=0;
+
+        function openMenu(){
+            // document.getElementById("mainMenu").style.pointer-events="none";
+            // document.getElementById("mainMenuOpened").style.opacity="1";
+
+            var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="hidden";
+
+            var menuElements = document.getElementsByClassName('menuHide');
+            var count = menuElements.length;
+
+            for (var i = 0; i < count; i++) {
+                var element = menuElements[i];
+                element.style.display="block";
+            }
+
+
+        }
+
+
+
+        function closeMenu(){
+
+
+            var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
+
+
+            var menuElements = document.getElementsByClassName('menuHide');
+            var count = menuElements.length;
+
+            for (var i = 0; i < count; i++) {
+                var element = menuElements[i];
+                element.style.display="none";
+            }
+
+
+        }
+
+
+        function onLoad(){
+            // var vieportHeight = document.documentElement.clientHeight/clientWidth;
+
+            // document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
+            // document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+            document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
+
+            
+            
+            // if(window.innerWidth<=720){
+            //  document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
+            // }else{
+            //  document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
+            // }
+
+
+
+
+
+            //maybe needed?
+            var mobileBreakPoint = 37*16;
+
+            var contentBlocks = document.getElementsByClassName('contentBlockNoBG');
+            var count = contentBlocks.length;
+
+
+            for (var i = 0; i < count; i++) {
+                var element = contentBlocks[i];
+                contentBlockHeight = window.innerHeight/100*80;
+                // element.style.height=contentBlockHeight+"px";
+                
+
+                if (window.innerWidth<mobileBreakPoint){
+                    element.style.width=(document.documentElement.clientWidth)+"px";
+                }else{
+                    element.style.width=(window.innerWidth-150)+"px";
+                }
+                
+            }
+
+
+
+
+            onLoad2();
+        }
+
+        window.onresize = function(event) {
+            onLoad();
+        };
+
+
+
+
+
+
+    </script>
+
+
+
+    <nav class="sideNav" id="sideNav">
+        <!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
+        <a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
+        <a class="menuItem3">WHERE</a>
+        <a class="menuItem4">HOW</a>
+        <a class="menuItem5">BUNDLES</a> -->
+
+        <a href="#write" class="menuItem1">WRITE</a>
+        <a href="#reviews" class="menuItem2" >REVIEWS</a>
+
+
+
+    </nav>
+
+
+
+
+
+
+    <div class="contentBlockNoBG">
+
+        <h1>Profile</h1>
+
+
+
+        <div class="contentBlockNoBGMarg">
+
+
 	     
 
        <section> <!-- Basic profile info-->
@@ -143,89 +313,93 @@
        </section> <!-- Credit card and billing info ends-->
  <br>
 
-        <section> <!-- my bundle-->
+  <section> <!-- my bundle-->
      
    <div class="productListingProfile">
+
+
+
+
  
-    <div id="bundle1" class="bundle">
+      <div id="bundle01" class="bundle">
 
-              
-             
-            <div class="productDetails"> 
-
-                <h3 class="title">Summer Paradise</h3>
+        <div class="productDetails"> 
+          <h3 class="title">Summer Paradise</h3>
              
             
-              <p class="description"> Make your summer last forever with this amazing bundle. Bright, juicy and tasty! Amazing fruits perfect for the summer lovers.</p>
+          <p class="description"> Make your summer last forever with this amazing bundle. Bright, juicy and tasty! Amazing fruits perfect for the summer lovers.</p>
             
             
-            <table>
+          <table>
+             <tr>
+           <td>Watermelon</td>
+           <td>X 1</td>
+           </tr>
+
+           <tr>
+           <td>Honeydew melon</td>
+           <td>X 2</td>
+           </tr>
+
+           <tr>
+            <td>Apple</td>
+            <td>X 15</td>
+               </tr>
+
                <tr>
-             <td>Watermelon</td>
-             <td>X 1</td>
-             </tr>
+            <td>Kiwi</td>
+            <td>X 4</td>
+               </tr>
 
-             <tr>
-             <td>Honeydew melon</td>
-             <td>X 2</td>
-             </tr>
+               <tr>
+            <td>Strawberry</td>
+            <td>X 1kg</td>
+               </tr>
 
-             <tr>
-              <td>Apple</td>
-              <td>X 15</td>
-                 </tr>
-
-                 <tr>
-              <td>Kiwi</td>
-              <td>X 4</td>
-                 </tr>
-
-                 <tr>
-              <td>Strawberry</td>
-              <td>X 1kg</td>
-                 </tr>
-
-                 <tr>
-              <td>Grapes</td>
-              <td>X 1kg</td>
-                 </tr>
+               <tr>
+            <td>Grapes</td>
+            <td>X 1kg</td>
+               </tr>
           </table>
               
 
-            
-            <table class="withHeaders">
-              <tr>
-                <td>
-                  <span class="tableHeader">Price<br><br></span> <!-- price priceNumber calories caloriesNumber  goodFor goodForNumber-->
-                  <span class="">$40</span>
-                </td>
+        
+          <table class="withHeaders">
+            <tr>
+              <td>
+                <span class="tableHeader">Price<br><br></span> <!-- price priceNumber calories caloriesNumber  goodFor goodForNumber-->
+                <span class="">$40</span>
+              </td>
 
-                <td>
-                  <span class="tableHeader">Calories<br><br></span>
-                  <span class="">250 kkal</span>
-                </td>
+              <td>
+                <span class="tableHeader">Calories<br><br></span>
+                <span class="">250 kkal</span>
+              </td>
 
-                 <td>
-                  <span class="tableHeader">Good For<br><br></span>
-                  <span class="">4 ppl/week</span>
-                </td>
-              </tr>
-            </table>
+               <td>
+                <span class="tableHeader">Good For<br><br></span>
+                <span class="">4 ppl/week</span>
+              </td>
+            </tr>
+          </table>
 
-          </div>
-
-
-          <div class="productImage">
-          </div>
-
-          <div class="clear">
-          </div>
+        </div>
 
 
-          <img class="floatingButton" src="img/icons/edit.svg" alt="add">
+        <div class="productImage">
+        </div>
+
+        <div class="clear">
+        </div>
 
 
- 
+        <a href="checkout.html"><img class="floatingButton" src="img/icons/edit.svg" alt="add"></a>
+
+      </div>
+
+
+
+
 
 
     </div>
@@ -234,8 +408,72 @@
     
 
     
-   </section> <!-- my bundle ends-->
+  </section> <!-- my bundle ends-->
  </div> <!-- profile block ends-->
+
+
+
+
+
+
+<script>
+  function onLoad2(){
+
+
+
+    var bundles = document.getElementsByClassName('productDetails');
+    var bundlesImgs = document.getElementsByClassName('productImage');
+    var floatingButtons = document.getElementsByClassName('floatingButton');
+    var count = bundles.length;
+
+
+    for (var i = 0; i < count; i++) {
+      var element1 = bundles[i];
+      var element2 = bundlesImgs[i];
+      var element3 = floatingButtons[i];
+
+
+      if (window.innerWidth>55*16){
+        element2.style.height = element1.clientHeight + "px";
+        element3.style.top = element1.clientHeight/5*1 + "px";
+      }else{
+        element2.style.height = 130 + "px";
+        element3.style.top = 103 + "px";
+      }
+      
+      
+      
+
+      console.log(element1.style.height);
+
+     
+
+      if (window.innerWidth<55*16){
+
+
+        element1.parentNode.replaceChild(element1, element2);
+        element1.parentNode.insertBefore(element2, element1); 
+
+
+      }
+      
+    }
+
+
+
+
+  };
+    
+
+  
+
+ </script>
+
+
+
+
+
+
 </body>
 
 

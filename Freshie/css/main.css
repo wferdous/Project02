@@ -527,26 +527,26 @@ input.creditCardInput::placeholder{
   
   position:relative;
   margin-top: 4rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  /*margin-left: 4rem;
+  margin-right: 4rem;*/
   padding-right: 0rem;
   padding-left: 0rem;
   padding-bottom: 0rem;
 
-  width: 90%;
+  /*width: 90%;*/
  
   border: 0px solid black;
   
 }
 
-@media (max-width: 30em){
+/*@media (max-width: 30em){
   .productListingProfile{
     padding-bottom: 2rem;
 
   }
-}
+}*/
 
-@media (max-width: 50em){
+/*@media (max-width: 50em){
   .productListingProfile{
   height: 580px;
   margin-left: 1.5rem;
@@ -554,7 +554,7 @@ input.creditCardInput::placeholder{
  
   }
   
-}
+}*/
 
 
 
@@ -953,10 +953,10 @@ textarea::placeholder{
   
   position:relative;
   margin-top: 7rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
+  /*margin-left: 4rem;
+  margin-right: 4rem;*/
   padding:4rem;
-  width: 90%;
+  /*width: 90%;*/
   border: 0px solid black;
   border-radius: 3px;
   box-shadow: 0 0px 10px 0 rgba(0,0,0,0.3) !important;
@@ -974,9 +974,10 @@ textarea::placeholder{
 
 @media (max-width: 50em){
   .profileCard{
-  height: 580px;
-  margin-left: 1.5rem;
   padding-top: 1rem;
+  padding-right:0.3rem;
+  padding-left:0.3rem;
+  padding-bottom:1rem;
  
   }
   
@@ -993,7 +994,8 @@ textarea::placeholder{
   padding-left: 1rem;
   
 
-  width: 370px;
+  max-width: 370px;
+  /*min-width: 300px;*/
   min-height: 250px;
   background-color: #2196F3;
   border: 0px solid black;
@@ -1006,23 +1008,23 @@ textarea::placeholder{
 
 @media (max-width: 50em){
   .creditCard{
- width: 300px;
- top:-90px;
+   max-width: 300px;
+   top:-90px;
 
- 
- padding-left: 0.1rem;
+   
+   padding-left: 0.1rem;
   }
   
 }
 
-@media (max-width: 30em){
+/*@media (max-width: 30em){
   .creditCard{
  
 left: -40;
 
   }
   
-}
+}*/
 
 
 
@@ -1097,12 +1099,11 @@ body{
 
 
 
-/*@media (max-width: 30em){
+@media (max-width: 30em){
   .contentBlockNoBGMarg{
-    margin:0 4rem;
-    padding-bottom: 2rem;
+    margin:0 1rem;
   }
-}*/
+}
 
 
 
