@@ -105,13 +105,6 @@
 
             for (var i = 0; i < count; i++) {
                 var element = contentBlocks[i];
-                contentBlockHeight = window.innerHeight/100*80;
-
-                if(window.innerHeight/100*80>400){
-                    element.style.height=contentBlockHeight+"px";
-                }else{
-                    element.style.height=400+"px";
-                }
                 
 
                 var widthTooSmall = window.innerWidth<mobileBreakPoint;
