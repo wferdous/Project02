@@ -12,7 +12,6 @@ body{
   font-family: 'Roboto', sans-serif;
   font-weight:400;
   color: rgba(0,0,0,0.78);
-  scroll-behavior: smooth;
 }
 
 
@@ -523,7 +522,6 @@ input.creditCardInput::placeholder{
   margin-left: 1rem;
   margin-bottom:0rem;
   margin-top:0.5rem;
-  font-size: 0.6rem
   width:250px;
   text-align: left;
 }
@@ -535,7 +533,6 @@ input.creditCardInput::placeholder{
   margin-left: 1rem;
   margin-bottom:0rem;
   margin-top:1rem;
-  font-size: 0.6rem
   width:250px;
   text-align: left;
 }
@@ -546,7 +543,6 @@ input.creditCardInput::placeholder{
    width:100%;
   
   height: 500px;
-  border:x solid black;
 }
 
 .mainNavItem{
@@ -1116,8 +1112,8 @@ left: -40;
   
   position:relative;
   padding-top: 0.5rem;
-  padding-right: auto;
-  padding-left: auto;
+  /*padding-right: auto;
+  padding-left: auto;*/
   padding-bottom: 0rem;
 
   width: 100px;
@@ -1364,7 +1360,7 @@ width: 100%;
   display: inline-block;
   
  /*margin-left: 4rem;*/
-  margin-top: none;
+  /*margin-top: none;*/
 }
 
 
@@ -1681,8 +1677,8 @@ width: 100%;
 
 .thankyouCard{
   /*padding-top: 15rem;*/
-  padding-left: auto;
-  padding-right: auto;
+  /*padding-left: auto;
+  padding-right: auto;*/
   
   width:100%;
   height:700px;
