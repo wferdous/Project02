@@ -58,6 +58,7 @@
 
   opacity: 0.3;
   cursor: pointer;
+  z-index:100 !important;
 }
 
 
@@ -105,6 +106,7 @@
 	text-align: center;
 	padding:0;
 	text-decoration: none;
+	z-index:51;
 }
 
 

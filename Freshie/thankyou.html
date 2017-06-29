@@ -21,11 +21,11 @@
 
 
 
-
+<!-- main menu -->
 <img src="img/icons/menu.svg" class="menuIcon" alt="menuIcon" width="90" height="90" onclick="openMenu()">
   <img src="img/icons/menuWhite.svg" class="menuIconWhite"  alt="menuWhiteIcon" width="90" height="90" onclick="openMenu()">
 
-
+  <!-- when opened show all this  -->
   <div class="mainMenu menuHide" id="mainMenuOpened">
     <img src="img/icons/close.svg" class="closeIcon menuHide"  alt="menuCloseIcon" width="90" height="90" onclick="closeMenu()">
 
@@ -57,19 +57,16 @@
 
   <script>
 
-
+// preset blockHeight for a fallback
   var contentBlockHeight = 200;
-  var scrollNow = true;
-  var scrollToPx=0;
-
+  
+    // when menu is requested by user
     function openMenu(){
-      // document.getElementById("mainMenu").style.pointer-events="none";
-      // document.getElementById("mainMenuOpened").style.opacity="1";
-
+      // do not let scrolling when opened
       var body = document.getElementsByTagName("BODY")[0];
             body.style.overflow="hidden";
 
-
+            // show all hidden elements
       var menuElements = document.getElementsByClassName('menuHide');
         var count = menuElements.length;
 
@@ -82,13 +79,18 @@
     }
 
 
-
+  // when menu is closed
     function closeMenu(){
+
+      // let page be scrollable
+        var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
+
+
+       // hide all elements
       var menuElements = document.getElementsByClassName('menuHide');
         var count = menuElements.length;
 
-        var body = document.getElementsByTagName("BODY")[0];
-            body.style.overflow="scroll";
 
       for (var i = 0; i < count; i++) {
         var element = menuElements[i];
@@ -100,50 +102,97 @@
 
 
     function onLoad(){
-      // var vieportHeight = document.documentElement.clientHeight/clientWidth;
-
-      // document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
-      // document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+      // make menu full screen
       document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
 
       
-      
-      // if(window.innerWidth<=720){
-      //  document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
-      // }else{
-      //  document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
-      // }
 
-
+      // set when the side nav should hide
       var mobileBreakPoint = 37*16;
 
       var contentBlocks = document.getElementsByClassName('contentBlock');
         var count = contentBlocks.length;
 
-
+        // adjust height of content blocks
       for (var i = 0; i < count; i++) {
         var element = contentBlocks[i];
         contentBlockHeight = window.innerHeight/100*80;
-        element.style.height=contentBlockHeight+"px";
         
-
-        if (window.innerWidth<mobileBreakPoint){
-          element.style.width=(document.documentElement.clientWidth)+"px";
+        if(window.innerHeight/100*80>400){
+          element.style.height=contentBlockHeight+"px";
         }else{
-          element.style.width=(window.innerWidth-150)+"px";
+          element.style.height=400+"px";
         }
+        
+        // hide side nav on smaller screens
+        var widthTooSmall = window.innerWidth<mobileBreakPoint;
+        var heightTooSmall = window.innerHeight<550;
+
+        var setToFullScreen = (document.documentElement.clientWidth)+"px";
+        var setToNotFullScreen = element.style.width=(window.innerWidth-150)+"px";
+
+        if(widthTooSmall||heightTooSmall) {
+          element.style.width=setToFullScreen;
+          document.getElementsByClassName("sideNav")[0].style.display="none";
+        }
+
+        if(!widthTooSmall&&!heightTooSmall) {
+          element.style.width = setToNotFullScreen;
+          document.getElementsByClassName("sideNav")[0].style.display="block";
+        } 
         
       }
 
 
-
+      // run more js
       onLoad2();
+
+
+
+      // compress main menu when on a screen with small height
+      var navHeightSmall = 480;
+
+            var menuButtonsLogIn = document.getElementsByClassName("menuButtonsLogIn")[0];
+
+            var menuButtonMain01 = document.getElementsByClassName("menuButtonsMain01")[0];
+            var menuButtonMain02 = document.getElementsByClassName("menuButtonsMain02")[0];
+            var menuButtonMain03 = document.getElementsByClassName("menuButtonsMain03")[0];
+            var menuButtonMain04 = document.getElementsByClassName("menuButtonsMain04")[0];
+
+            var contact01 = document.getElementsByClassName("contact01")[0];
+            var contact02 = document.getElementsByClassName("contact02")[0];
+
+
+            if (window.innerHeight<navHeightSmall){
+                menuButtonsLogIn.style.bottom = 15+"rem";
+
+                menuButtonMain01.style.bottom = 1+"rem";
+                menuButtonMain02.style.bottom = 0+"rem";
+                menuButtonMain03.style.bottom = -1+"rem";
+                menuButtonMain04.style.bottom = -2+"rem";
+
+                contact01.style.bottom = 1 +"rem";
+                contact02.style.bottom = 0 +"rem";
+            }else{
+
+              menuButtonsLogIn.style.bottom = 27+"rem";
+
+                menuButtonMain01.style.bottom = 10+"rem";
+                menuButtonMain02.style.bottom = 8+"rem";
+                menuButtonMain03.style.bottom = 6+"rem";
+                menuButtonMain04.style.bottom = 4+"rem";
+
+                contact01.style.bottom = 3 +"rem";
+                contact02.style.bottom = 1 +"rem";
+
+            }
 
 
 
       
     }
-
+    
+    // run all code on resizes
     window.onresize = function(event) {
         onLoad();
     };
@@ -162,11 +211,12 @@
 
 
   
-
+  <!-- full screen thank you page -->
   <div id="thankyouImg" class="thankyouCard">
 
    
     <p class="paragraph thankYou"> 
+    <!-- edit css specially for here since nowhere else is needed -->
     <span style="font-size:3rem; text-align:center; display:block;"> THANK YOU </span> <br>
     <span style="text-align: center; display:block;"> Thank you for ordering with Freshie. <br>
     Your order is successful.</span></p>
@@ -199,7 +249,7 @@
  <script>
   function onLoad2(){
 
-
+    // fix the height of the block so it works perfect on all screens
     var thankyouCard = document.getElementsByClassName('thankyouCard')[0];
 
 
