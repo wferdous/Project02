@@ -296,13 +296,16 @@ section{
 
 
 .button{
- background-color: rgba(244,81,30,0);
-   color:#2196F3;
+  /*background-color: rgba(244,81,30,0);*/
+  background-color:rgba(255,255,255,1);
+  color:#2196F3;
+  /*color:rgba(244,81,30,1);*/
   text-align: center;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   
   border: 2px solid #2196F3;
+  /*border: 2px solid rgba(244,81,30,1);*/
   margin-top: 1rem;
   margin-bottom: 1rem;
   
