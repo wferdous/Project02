@@ -13,179 +13,136 @@
 </head>
 
 <body id="lightGrey">
-  <section>
-  
+ 
+  <h1 >Shopping Cart</h1>
+    <div class="checkoutBlock">
 
-    <h1 >Shopping Cart</h1>
-
-  <!--Shipping address start-->
+   <section> <!--Shipping address start-->
       <div class="profileCard"><!--Shipping address block-->
-  <div class="addressCard"> <!--Shopping cart icon block-->
-  <img class="profileIcon" src="img/icons/shoppingCart.svg" alt="add"></div> <!--Shopping cart icon-->
+          <div class="addressCard"> <!--Shopping cart icon block-->
+          <img class="profileIcon" src="img/icons/shoppingCart.svg" alt="add"></div> <!--Shopping cart icon-->
 
-      <div class="shippingForm">  <!--Shipping address form-->
-
+            
             <form > 
-              <div class="shipping">
-                <p class="fieldLabel"> Shipping Address </p>
-                <input type="text" name="fname" placeholder="Your Address" style="width: 300">
-              </div>
-
-              <div class="shipping">
-                <p class="fieldLabel"> City </p>
-                <input type="text"   name="fname" placeholder="Enter city">
+                <div class="shipping">
+                      <p class="fieldLabel"> Shipping Address </p>
+                      <input type="text" name="fname" placeholder="Your Address" style="width: 240">
                 </div>
-    
-              <div class="shipping">
-                <p class="fieldLabel"> Zipcode </p>
-                 <input type="text"   name="fname" placeholder="Enter zip/postal code">
-                 </div>
+
+                <div class="shipping">
+                      <p class="fieldLabel"> City </p>
+                      <input type="text"   name="fname" placeholder="Enter city">
+                </div>
+      
+                <div class="shipping">
+                      <p class="fieldLabel"> Zipcode </p>
+                       <input type="text"   name="fname" placeholder="Enter zip/postal code">
+                </div>
 
 
-              <div class="shipping">
-                <p class="fieldLabel"> Country </p>
-                 <select class="dropdown" id="country" name="fname">
-                            <option value="canada">Canada</option>
-                            <option value="usa">USA</option>
-                 </select>
-                 </div>
-        
-            </form> 
+                <div class="shipping">
+                         <p class="fieldLabel"> Country </p>
+                         <select class="dropdown" id="country" name="fname">
+                                  <option value="canada">Canada</option>
+                                  <option value="usa">USA</option>
+                         </select>
+                </div>
+             </form> 
            </div> <!--Shipping address form ends-->
-      </div>  <!--Shipping address ends-->
-
+    </section>
          
 
+    <section> <!-- Credit card and billing info-->
+            <div class="profileCard"> <!-- Credit card info block-->
 
+                <div class="creditCard"> <!-- credit card -->
+                     <form>
+                         <p class="fieldLabelDark"> Name </p>
+                         <input type="text" class="creditCardInput" name="fname" placeholder="John Doe"><br>
+                     </form>
 
+                      <form>
+                            <p class="fieldLabelDark"> Card Number </p>
+                            <input type="text" class="creditCardInput creditCardNumber" name="fname" placeholder="4111-1111-1111-1111"><br>
+                      </form>
 
-         
-  <div class="checkoutCard"> <!--Checkout block-->
+                      <form>
+                            <p class="fieldLabelDark"> Expiry Date </p>
+                            <input type="text" class="creditCardInput" name="fname" placeholder="mm/yy"><br>
+                      </form>
+                </div><!-- credit card ends -->
 
-        <div class="creditCard"> <!--Creditcard-->
-          <form><!--Creditcard info-->
-              <p class="fieldLabelDark"> Name </p>
-               <input type="text" class="creditCardInput" name="fname" placeholder="John Doe"><br>
-          </form>
-
-            <form>
-                <p class="fieldLabelDark"> Card Number </p>
-                 <input type="text" class="creditCardInput creditCardNumber" name="fname" placeholder="4111-1111-1111-1111"><br>
-            </form>
-
-            <form>
-                <p class="fieldLabelDark"> Expiry Date </p>
-                 <input type="text" class="creditCardInput" name="fname" placeholder="mm/yy"><br>
-            </form><!--Creditcard info ends-->
-
-             <!--<form class="cvv">
-                <p class="fieldLabelDark"> CVV </p>
-                 <input type="text" class="creditCardInput" name="fname" placeholder="222"><br>
-            </form>-->
-
-         </div><!--Creditcard ends-->
-        
-               
-
-
-
-     <div><!--Checkout details-->
-        <table class="checkoutTable"><!--Checkout details-->
-          <tr>
-            <th>
-              <span class="product">Bundle</span> 
-           <!-- <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >-->
-
-            
-
-            </th>
-
-           <th>
-              <span class="quantity">Quantity</span>
-            </th>
-              <!--  <form>
-                   <select class="selectQuantity" id="country" name="fname">
-                      <option value="number">1</option>
-                      <option value="number">2</option>
-                      <option value="number">3</option>
-                      <option value="number">4</option>
-                      <option value="number">5</option>
-                      <option value="number">6</option>
-                     </select>
-                 </form> -->
           
-            <th>
-              <span class="frequency">Frequency</span><br>
-            </th>
+                
 
-
-            <th>
-              <span class="total">Total Price</span><br>
-            </th>
-
-          </tr>
-        </table>
-
-      </div> <!--Checkout details ends-->
-
-
-
-
-<br>
-
-  <div>
-        <table class="checkoutDetailsTable">
-          <tr>
-            <th>
-              <span class="totalPrice">Summer paradise</span>
+                <div><!--Checkout details-->
+                      <table class="checkoutTable"><!--Checkout details-->
+                          <tr>
+                            <th>
+                              <span class="product">Bundle</span> 
            <!-- <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >-->
+                            </th>
 
-            
+                             <th>
+                                <span class="quantity">Quantity</span>
+                            </th>
+                  
+                  
+                            <th>
+                              <span class="frequency">Frequency</span><br>
+                            </th>
 
-            </th>
+                            <th>
+                              <span class="total">Total Price</span><br>
+                            </th>
 
-           <th>
-               <select class="selectQuantity" id="country" name="fname">
-              <option value="number">1</option>
-              <option value="number">2</option>
-              <option value="number">3</option>
-              <option value="number">4</option>
-         
-             </select>
-            </th>
-             
-          
-            <th>
-              
-            <select class="selectFrequency" id="country" name="fname">
-              <option value="number">Weekly</option>
-              <option value="number">Bi-Weekly</option>
-              <option value="number">Bi-Monthly</option>
-              <option value="number">Monthly</option>
-         
-             </select>
+                        </tr>
+                    </table>
+                </div> <!--Checkout details ends-->
 
+            <br>
 
-            </th>
+                <div><!--Checkout info -->
+                   <table class="checkoutDetailsTable">
+                      <tr>
+                        <th>
+                          <span class="bundleName">Summer paradise</span>
+                        </th>
 
+                        <th>
+                           <select class="selectQuantity" id="country" name="fname">
+                              <option value="number">1</option>
+                              <option value="number">2</option>
+                              <option value="number">3</option>
+                              <option value="number">4</option>
+                          </select>
+                        </th>
+                     
+                  
+                        <th>
+                          <select class="selectFrequency" id="country" name="fname">
+                              <option value="number">Weekly</option>
+                              <option value="number">Bi-Weekly</option>
+                              <option value="number">Bi-Monthly</option>
+                              <option value="number">Monthly</option>
+                          </select>
+                        </th>
 
-            <th>
-              <span class="totalPrice">$41 CAD</span><br>
-            </th>
+                        <th>
+                          <span class="totalPrice">$41 CAD</span><br>
+                        </th>
+                      </tr>
+                  </table>
 
-          </tr>
-        </table>
+                  <input type="submit" class="button buttonProfile" value="CHECKOUT"> 
+              </div> <!--Checkout info -->
 
+      </div> <!-- Credit card info block ends-->
+    </section> <!-- Credit card and billing info ends-->
 
-        <input type="submit" class="button buttonBlue">
+</div><!--Checkout block ends-->
 
-      </div>
-
-
-
-  </div><!--Checkout block ends-->
-
-   </section>
+   
 
 
 
