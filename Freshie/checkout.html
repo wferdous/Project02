@@ -1,152 +1,364 @@
 <html lang="en">
 
-
 <head>
     <title>Checkout</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
- 
+
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/mainMenu.css" rel="stylesheet">
-
 </head>
 
-<body id="lightGrey">
- 
-  <h1 >Shopping Cart</h1>
-    <div class="checkoutBlock">
+<body onload="onLoad()">
 
-   <section> <!--Shipping address start-->
-      <div class="profileCard"><!--Shipping address block-->
-          <div class="addressCard"> <!--Shopping cart icon block-->
-          <img class="profileIcon" src="img/icons/shoppingCart.svg" alt="add"></div> <!--Shopping cart icon-->
+
+
+    <img src="img/icons/menu.svg" class="menuIcon" width="90" height="90" onclick="openMenu()">
+    <img src="img/icons/menuWhite.svg" class="menuIconWhite" width="90" height="90" onclick="openMenu()">
+
+
+    <div class="mainMenu menuHide" id="mainMenuOpened">
+        <img src="img/icons/close.svg" class="closeIcon menuHide" width="90" height="90" onclick="closeMenu()">
+
+        <a class="menuHide menuButtonsLogIn" href="login.html"> SIGN IN / SIGN UP</a> 
+
+        <a class="menuHide menuButtonsMain menuButtonsMain01" href="index.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain01">  HOME  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain02" href="profile.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain02">  PROFILE  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain03" href="reviews.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain03">  REVIEWS  </h1></a>
+        <a class="menuHide menuButtonsMain menuButtonsMain04" href="citations.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain04">  CITATIONS  </h1></a>
+
+
+        
+
+
+        <h2 class="menuHide contact contact01">
+            604-594-3948
+        </h2>
+
+        <h2 class="menuHide contact contact02">
+            contact_us@freshie.ca
+        </h2>
+
+
+        
+
+    </div>
+
+
+
+    <script>
+
+
+    var contentBlockHeight = 200;
+    var scrollNow = true;
+    var scrollToPx=0;
+
+        function openMenu(){
+            // document.getElementById("mainMenu").style.pointer-events="none";
+            // document.getElementById("mainMenuOpened").style.opacity="1";
+
+            var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="hidden";
+
+            var menuElements = document.getElementsByClassName('menuHide');
+            var count = menuElements.length;
+
+            for (var i = 0; i < count; i++) {
+                var element = menuElements[i];
+                element.style.display="block";
+            }
+
+
+        }
+
+
+
+        function closeMenu(){
+
+
+            var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
+
+
+            var menuElements = document.getElementsByClassName('menuHide');
+            var count = menuElements.length;
+
+            for (var i = 0; i < count; i++) {
+                var element = menuElements[i];
+                element.style.display="none";
+            }
+
+
+        }
+
+
+        function onLoad(){
+            // var vieportHeight = document.documentElement.clientHeight/clientWidth;
+
+            // document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
+            // document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+            document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
 
             
-            <form > 
-                <div class="shipping">
-                      <p class="fieldLabel"> Shipping Address </p>
-                      <input type="text" name="fname" placeholder="Your Address" style="width: 240">
-                </div>
+            
+            // if(window.innerWidth<=720){
+            //  document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
+            // }else{
+            //  document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
+            // }
 
-                <div class="shipping">
-                      <p class="fieldLabel"> City </p>
-                      <input type="text"   name="fname" placeholder="Enter city">
-                </div>
+
+
+
+
+            //maybe needed?
+            var mobileBreakPoint = 37*16;
+
+            var contentBlocks = document.getElementsByClassName('contentBlockNoBG');
+            var count = contentBlocks.length;
+
+
+            for (var i = 0; i < count; i++) {
+                var element = contentBlocks[i];
+                contentBlockHeight = window.innerHeight/100*80;
+                // element.style.height=contentBlockHeight+"px";
+                
+
+                if (window.innerWidth<mobileBreakPoint){
+                    element.style.width=(document.documentElement.clientWidth)+"px";
+                }else{
+                    element.style.width=(window.innerWidth-150)+"px";
+                }
+                
+            }
+
+
+
+
+            onLoad2();
+        }
+
+        window.onresize = function(event) {
+            onLoad();
+        };
+
+
+
+
+
+
+    </script>
+
+
+
+    <nav class="sideNav" id="sideNav">
+        <!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
+        <a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
+        <a class="menuItem3">WHERE</a>
+        <a class="menuItem4">HOW</a>
+        <a class="menuItem5">BUNDLES</a> -->
+
+        <a href="#info" class="menuItem1">INFO</a>
+        <a href="#address" class="menuItem2Address" >ADDRESS</a>
+        <a href="#payment" class="menuItem3Payment" >PAYMENT</a>
+        <a href="#bundle01" class="menuItem4BundleProf" >BUNDLE</a>
+
+
+
+    </nav>
+
+
+
+
+
+
+    <div id="lightGrey" class="contentBlockNoBG">
+
+        <h1>Cart</h1>
+
+
+
+        <div class="contentBlockNoBGMarg">
+
+
+        <section> <!-- Shipping info-->
+           <div class="profileCard"> <!-- Shipping info block-->
+               <div class="addressCard" id="address"> <!-- icon-->
+                  <img class="profileIcon" src="img/icons/shoppingCart.svg" alt="add">
+               </div>
+
+               <div class="shippingForm"><!-- Form starts-->
+                  <form >
+                     <div class="shipping">
+                        <p class="fieldLabel"> Shipping Address </p>
+                        <input type="text" name="fname" placeholder="Your Address" style="width: 220">
+                     </div>
+
+                    <div class="shipping">
+                        <p class="fieldLabel"> City </p>
+                        <input type="text"   name="fname" placeholder="Enter city">
+                    </div>
+
+                    <div class="shipping">
+                        <p class="fieldLabel"> Zipcode </p>
+                        <input type="text"   name="fname" placeholder="Enter zip/postal code">
+                    </div>
+
+
+                    <div class="shipping">
+                        <p class="fieldLabel"> Country </p>
+                        <select class="dropdown" id="country" name="fname">
+                            <option value="canada">Canada</option>
+                            <option value="usa">USA</option>
+                        </select>
+                    </div>
+
+                  
+
+                    <div class="clear"> </div> 
+
+                 </form> 
+              </div><!-- Form ends-->
+          </div><!-- Shipping info block ends-->
+        </section> <!-- Shipping info ends-->
+   
       
-                <div class="shipping">
-                      <p class="fieldLabel"> Zipcode </p>
-                       <input type="text"   name="fname" placeholder="Enter zip/postal code">
-                </div>
 
-
-                <div class="shipping">
-                         <p class="fieldLabel"> Country </p>
-                         <select class="dropdown" id="country" name="fname">
-                                  <option value="canada">Canada</option>
-                                  <option value="usa">USA</option>
-                         </select>
-                </div>
-             </form> 
-           </div> <!--Shipping address form ends-->
-    </section>
-         
-
-    <section> <!-- Credit card and billing info-->
-            <div class="profileCard"> <!-- Credit card info block-->
-
-                <div class="creditCard"> <!-- credit card -->
+        <section> <!-- Credit card and billing info-->
+             <div class="profileCard"> <!-- Credit card info block-->
+                <div class="creditCard" id="payment"> <!-- credit card -->
                      <form>
                          <p class="fieldLabelDark"> Name </p>
                          <input type="text" class="creditCardInput" name="fname" placeholder="John Doe"><br>
                      </form>
 
-                      <form>
-                            <p class="fieldLabelDark"> Card Number </p>
-                            <input type="text" class="creditCardInput creditCardNumber" name="fname" placeholder="4111-1111-1111-1111"><br>
-                      </form>
+                    <form>
+                          <p class="fieldLabelDark"> Card Number </p>
+                          <input type="text" class="creditCardInput creditCardNumber" name="fname" placeholder="4111-1111-1111-1111"> <br>
+                    </form>
 
-                      <form>
-                            <p class="fieldLabelDark"> Expiry Date </p>
-                            <input type="text" class="creditCardInput" name="fname" placeholder="mm/yy"><br>
-                      </form>
+                    <form>
+                          <p class="fieldLabelDark"> Expiry Date </p>
+                          <input type="text" class="creditCardInput" name="fname" placeholder="mm/yy"><br>
+                    </form>
                 </div><!-- credit card ends -->
 
-          
-                
+        
+         <div class="shippingForm"> <!-- credit card billing form starts -->
 
-                <div><!--Checkout details-->
-                      <table class="checkoutTable"><!--Checkout details-->
-                          <tr>
-                            <th>
-                              <span class="product">Bundle</span> 
-           <!-- <img style="position: absolute; top:340px; right:803px; z-index:5;" src="img/placeholder2.png" alt="placeholder" width="80" height="80" >-->
-                            </th>
+                   
+                        <div class="shipping">
+                            <p class="fieldLabel"> Bundle</p>
 
-                             <th>
-                                <span class="quantity">Quantity</span>
-                            </th>
-                  
-                  
-                            <th>
-                              <span class="frequency">Frequency</span><br>
-                            </th>
+                            <p class="checkoutText">Summer Paradise</h4>
+                        </div>
 
-                            <th>
-                              <span class="total">Total Price</span><br>
-                            </th>
-
-                        </tr>
-                    </table>
-                </div> <!--Checkout details ends-->
-
-            <br>
-
-                <div><!--Checkout info -->
-                   <table class="checkoutDetailsTable">
-                      <tr>
-                        <th>
-                          <span class="bundleName">Summer paradise</span>
-                        </th>
-
-                        <th>
-                           <select class="selectQuantity" id="country" name="fname">
+                        <div class="shipping">
+                            <p class="fieldLabel"> Quantity </p>
+                            <select class="dropdown" id="quantity" name="fname">
                               <option value="number">1</option>
                               <option value="number">2</option>
                               <option value="number">3</option>
                               <option value="number">4</option>
-                          </select>
-                        </th>
-                     
-                  
-                        <th>
-                          <select class="selectFrequency" id="country" name="fname">
-                              <option value="number">Weekly</option>
+                            </select>
+                        </div>
+
+                        <div class="shipping">
+                            <p class="fieldLabel"> Frequency </p>
+                             <select class="dropdown" id="frequency" name="fname">
+                                  <option value="number">Weekly</option>
                               <option value="number">Bi-Weekly</option>
                               <option value="number">Bi-Monthly</option>
                               <option value="number">Monthly</option>
-                          </select>
-                        </th>
+                            </select>
+                        </div>
 
-                        <th>
-                          <span class="totalPrice">$41 CAD</span><br>
-                        </th>
-                      </tr>
-                  </table>
 
-                  <input type="submit" class="button buttonProfile" value="CHECKOUT"> 
-              </div> <!--Checkout info -->
+                        <div class="shipping">
+                          <p class="fieldLabel"> Total Price </p>
+                             <p class="checkoutText">$40 + GST= $44.8 </h4>
+                        </div>
 
-      </div> <!-- Credit card info block ends-->
-    </section> <!-- Credit card and billing info ends-->
-
-</div><!--Checkout block ends-->
-
-   
+                        <input type="submit" class="button buttonProfile" value="CHECKOUT"> 
+                    
+                 </div> <!-- credit card billing form ends -->
 
 
 
+  
+            </div> <!-- Credit card info block ends-->
+       </section> <!-- Credit card and billing info ends-->
+ 
+ </div> <!-- profile block ends-->
+
+ </div>
 
 
 
-   
+
+<script>
+  function onLoad2(){
+
+
+
+    var bundles = document.getElementsByClassName('productDetails');
+    var bundlesImgs = document.getElementsByClassName('productImage');
+    var floatingButtons = document.getElementsByClassName('floatingButton');
+    var count = bundles.length;
+
+
+    for (var i = 0; i < count; i++) {
+      var element1 = bundles[i];
+      var element2 = bundlesImgs[i];
+      var element3 = floatingButtons[i];
+
+
+      if (window.innerWidth>55*16){
+        element2.style.height = element1.clientHeight + "px";
+        element3.style.top = element1.clientHeight/5*1 + "px";
+      }else{
+        element2.style.height = 130 + "px";
+        element3.style.top = 103 + "px";
+      }
+      
+      
+      
+
+      console.log(element1.style.height);
+
+     
+
+      if (window.innerWidth<55*16){
+
+
+        element1.parentNode.replaceChild(element1, element2);
+        element1.parentNode.insertBefore(element2, element1); 
+
+
+      }
+      
+    }
+
+
+
+
+  };
+    
+
+  
+
+ </script>
+
+
+
+
+
+
+</body>
+
+
+<!--<input type="submit" class="button buttonBlue">-->
+
+
+
