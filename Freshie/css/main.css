@@ -36,7 +36,12 @@ h1{
   text-align: left;
   padding-left:4rem;
   margin-bottom:1rem;
+
+  margin-top:0;
+  padding-top:3.35rem;
 }
+
+
 
 
 
@@ -44,6 +49,8 @@ h1{
   h1{
     font-size: 3rem;
     padding-left:2rem;
+
+    padding-top:2rem;
   }
 }
 
@@ -1292,7 +1299,7 @@ width: 100%;
   display: inline-block;
   
  /*margin-left: 4rem;*/
-margin-top: none;
+  margin-top: none;
 }
 
 
@@ -1538,6 +1545,20 @@ margin-top: none;
 
 #bundle02  .productImage{
   background-image: url('../img/bundle/bundle2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+#bundle03  .productImage{
+  background-image: url('../img/bundle/bundle3.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+
+#bundle04  .productImage{
+  background-image: url('../img/bundle/bundle4.jpg');
   background-size: cover;
   background-position: center;
 }
