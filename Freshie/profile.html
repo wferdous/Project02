@@ -53,12 +53,8 @@
 
 
     var contentBlockHeight = 200;
-    var scrollNow = true;
-    var scrollToPx=0;
 
         function openMenu(){
-            // document.getElementById("mainMenu").style.pointer-events="none";
-            // document.getElementById("mainMenuOpened").style.opacity="1";
 
             var body = document.getElementsByTagName("BODY")[0];
             body.style.overflow="hidden";
@@ -95,29 +91,9 @@
 
 
         function onLoad(){
-            // var vieportHeight = document.documentElement.clientHeight/clientWidth;
-
-            // document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
-            // document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
             document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
 
-            // if(window.innerHeight<550){
-            //   document.getElementsByClassName("sideNav")[0].style.display="none";
-            // }else{
-            //   document.getElementsByClassName("sideNav")[0].style.display="block";
-            // }
-            
-            // if(window.innerWidth<=720){
-            //  document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
-            // }else{
-            //  document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
-            // }
 
-
-
-
-
-            //maybe needed?
             var mobileBreakPoint = 37*16;
 
             var contentBlocks = document.getElementsByClassName('contentBlockNoBG');
@@ -214,11 +190,6 @@
 
 <!--Side bar-->
     <nav class="sideNav" id="sideNav">
-        <!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
-        <a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
-        <a class="menuItem3">WHERE</a>
-        <a class="menuItem4">HOW</a>
-        <a class="menuItem5">BUNDLES</a> -->
 
         <a href="#info" class="menuItem1">INFO</a>
         <a href="#address" class="menuItem2Address" >ADDRESS</a>

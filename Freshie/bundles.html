@@ -22,7 +22,7 @@
 
 	
 
-
+	<!-- main menu for more info and more detailed commenting check index page -->
 	<img src="img/icons/menu.svg" class="menuIcon" alt="menuIcon" width="90" height="90" onclick="openMenu()">
 	<img src="img/icons/menuWhite.svg" class="menuIconWhite"  alt="menuWhiteIcon" width="90" height="90" onclick="openMenu()">
 
@@ -62,8 +62,6 @@
 	var contentBlockHeight = 200;
 
 		function openMenu(){
-			// document.getElementById("mainMenu").style.pointer-events="none";
-			// document.getElementById("mainMenuOpened").style.opacity="1";
 
 
 			var body = document.getElementsByTagName("BODY")[0];
@@ -100,23 +98,8 @@
 
 
 		function onLoad(){
-			// var vieportHeight = document.documentElement.clientHeight/clientWidth;
-
-			// document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
-			// document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
 			document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
 
-			// if(window.innerHeight<550){
-			// 	document.getElementsByClassName("sideNav")[0].style.display="none";
-			// }else if(window.innerWidth>mobileBreakPoint){
-			// 	document.getElementsByClassName("sideNav")[0].style.display="block";
-			// }
-			
-			// if(window.innerWidth<=720){
-			// 	document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
-			// }else{
-			// 	document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
-			// }
 
 
 			var mobileBreakPoint = 37*16;
@@ -152,12 +135,6 @@
 				} 
 
 
-
-				// if (window.innerWidth<mobileBreakPoint||window.innerHeight<550){
-				// 	element.style.width=(document.documentElement.clientWidth)+"px";
-				// }else{
-				// 	element.style.width=(window.innerWidth-150)+"px";
-				// }
 				
 			}
 
@@ -220,20 +197,12 @@
 	</script>
 
 
-
-	<nav class="sideNav" id="sideNav"><!--Sidebars-->
-		<!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
-		<a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
-		<a class="menuItem3">WHERE</a>
-		<a class="menuItem4">HOW</a>
-		<a class="menuItem5">BUNDLES</a> -->
-
+	<!-- side menu for more information check index page -->
+	<nav class="sideNav" id="sideNav">
 		<a href="#bundle01" class="menuItem1Bundle">BUNDLE01</a>
 		<a href="#bundle02" class="menuItem2Bundle" >BUNDLE02</a>
 		<a href="#bundle03" class="menuItem3Bundle">BUNDLE03</a>
 		<a href="#bundle04" class="menuItem4Bundle">BUNDLE04</a>
-
-
 
 	</nav>
 
