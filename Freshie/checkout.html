@@ -153,7 +153,7 @@
     </script>
 
 
-
+<!--Sidebar starts-->
     <nav class="sideNav" id="sideNav">
         <!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
         <a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
@@ -167,22 +167,23 @@
 
 
     </nav>
+    <!--Sidebar ends-->
 
 
 
 
 
-
+    
     <div id="lightGrey" class="contentBlockNoBG">
 
         <h1>Cart</h1>
 
 
 
-        <div class="contentBlockNoBGMarg">
+        <div class="contentBlockNoBGMarg"> <!--Checkout block-->
 
 
-        <section> <!-- Shipping info-->
+        <section> 
            <div class="profileCard"> <!-- Shipping info block-->
                <div class="addressCard" id="address"> <!-- icon-->
                   <img class="profileIcon" src="img/icons/shoppingCart.svg" alt="add">
@@ -190,23 +191,23 @@
 
                <div class="shippingForm"><!-- Form starts-->
                   <form >
-                     <div class="shipping">
+                     <div class="shipping"><!-- Address form-->
                         <p class="fieldLabel"> Shipping Address </p>
                         <input type="text" name="fname" placeholder="Your Address" style="width: 220">
                      </div>
 
-                    <div class="shipping">
+                    <div class="shipping"><!-- city-->
                         <p class="fieldLabel"> City </p>
                         <input type="text"   name="fname" placeholder="Enter city">
                     </div>
 
-                    <div class="shipping">
+                    <div class="shipping"><!-- Zipcode-->
                         <p class="fieldLabel"> Zipcode </p>
                         <input type="text"   name="fname" placeholder="Enter zip/postal code">
                     </div>
 
 
-                    <div class="shipping">
+                    <div class="shipping"> <!-- Choose Country-->
                         <p class="fieldLabel"> Country </p>
                         <select class="dropdown" id="country" name="fname">
                             <option value="canada">Canada</option>
@@ -221,7 +222,7 @@
                  </form> 
               </div><!-- Form ends-->
           </div><!-- Shipping info block ends-->
-        </section> <!-- Shipping info ends-->
+        </section> 
    
       
 
@@ -229,17 +230,17 @@
              <div class="profileCard"> <!-- Credit card info block-->
                 <div class="creditCard" id="payment"> <!-- credit card -->
                      <form>
-                         <p class="fieldLabelDark"> Name </p>
+                         <p class="fieldLabelDark"> Name </p><!-- Cardholder name -->
                          <input type="text" class="creditCardInput" name="fname" placeholder="John Doe"><br>
                      </form>
 
                     <form>
-                          <p class="fieldLabelDark"> Card Number </p>
+                          <p class="fieldLabelDark"> Card Number </p><!-- Card Number -->
                           <input type="text" class="creditCardInput creditCardNumber" name="fname" placeholder="4111-1111-1111-1111"> <br>
                     </form>
 
                     <form>
-                          <p class="fieldLabelDark"> Expiry Date </p>
+                          <p class="fieldLabelDark"> Expiry Date </p> <!-- Expiry Date -->
                           <input type="text" class="creditCardInput" name="fname" placeholder="mm/yy"><br>
                     </form>
                 </div><!-- credit card ends -->
@@ -248,13 +249,13 @@
          <div class="shippingForm"> <!-- credit card billing form starts -->
 
                    
-                        <div class="shipping">
+                        <div class="shipping"><!-- Bundle name -->
                             <p class="fieldLabel"> Bundle</p>
 
                             <p class="checkoutText">Summer Paradise</p>
                         </div>
 
-                        <div class="shipping">
+                        <div class="shipping"><!-- Choose Quantity -->
                             <p class="fieldLabel"> Quantity </p>
                             <select class="dropdown" id="quantity" name="fname">
                               <option value="number">1</option>
@@ -264,7 +265,7 @@
                             </select>
                         </div>
 
-                        <div class="shipping">
+                        <div class="shipping"><!-- Choose Frequency -->
                             <p class="fieldLabel"> Frequency </p>
                              <select class="dropdown" id="frequency" name="fname">
                                   <option value="number">Weekly</option>
@@ -275,13 +276,15 @@
                         </div>
 
 
-                        <div class="shipping">
+                        <div class="shipping"> <!-- Total Price -->
                           <p class="fieldLabel"> Total Price </p>
                              <p class="checkoutText">$40 + GST= $44.8 </p>
                         </div>
 
-                        <input type="submit" class="button buttonProfile" value="CHECKOUT"> 
-                    
+                    <a href="thankyou.html"><input type="submit" class="button buttonProfile" value="CHECKOUT"> </a><!-- Link to next page -->
+                 
+                   
+
                  </div> <!-- credit card billing form ends -->
 
 
@@ -290,7 +293,7 @@
             </div> <!-- Credit card info block ends-->
        </section> <!-- Credit card and billing info ends-->
  
- </div> <!-- profile block ends-->
+ </div> <!--Checkout block ends-->
 
  </div>
 
@@ -358,7 +361,7 @@
 </body>
 
 
-<!--<input type="submit" class="button buttonBlue">-->
+
 
 
 
