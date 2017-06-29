@@ -1316,7 +1316,7 @@ width: 100%;
 
 
 #updates{
-  background-image: url('../img/homePage/update/update.jpeg');
+  background-image: url('../img/homePage/update/update.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -1630,7 +1630,7 @@ padding-left: 25em;
 }
 
 #thankyouImg{
-  background-image: url('../img/thankyou.jpeg');
+  background-image: url('../img/thankyou.jpg');
   background-size: cover;
   background-position: center;
 }

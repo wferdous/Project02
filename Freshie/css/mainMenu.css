@@ -71,7 +71,7 @@
 	/*background-color: rgba(255,255,255,0.9);*/
 
 
-	background-image: url('../img/menu/menu02.jpeg');
+	background-image: url('../img/menu/menu02.jpg');
   background-size: cover;
   background-position: center;
 
@@ -418,6 +418,12 @@
 .menuItem4Bundle{
 	position:fixed;
 	top:400px;
+}
+
+
+.menuItem4BundleProf{
+	position:fixed;
+	top:350px;
 }
 
 
