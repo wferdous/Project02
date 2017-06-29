@@ -728,16 +728,23 @@ img{
 
 .checkoutTable{
 
-margin: auto;
-margin-top: 4rem;
 
+margin-top: 0;
+
+}
+
+@media (max-width: 30em){
+  img{
+    width: 104.5%;
+  }
 }
 
 
 .checkoutDetailsTable{
 
-margin: auto;
-margin-top: 4rem;
+
+margin-top: 2rem;
+margin-left: 2rem;
 
 }
 
@@ -745,7 +752,7 @@ margin-top: 4rem;
 
 .product{
 margin-right: 4rem;
-  margin-left: 4rem;
+  margin-left: 2rem;
 }
 
 
@@ -771,12 +778,18 @@ margin-right: 4rem;
 }
 
 
+.bundleName{
+font-weight: normal;
+ margin-top: 4rem;
+
+}
 
 
 .totalPrice{
 
- margin-right: 0.5rem;
- margin-left: 2rem;
+margin-right: 1rem;
+margin-left: 2.5rem;
+
  font-weight: normal;
  margin-top: 4rem;
 }
