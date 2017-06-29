@@ -17,11 +17,11 @@
 
 
 
-
+		<!-- main menu -->
 		<img src="img/icons/menu.svg" class="menuIcon" alt="menuIcon" width="90" height="90" onclick="openMenu()">
 	<img src="img/icons/menuWhite.svg" class="menuIconWhite"  alt="menuWhiteIcon" width="90" height="90" onclick="openMenu()">
 
-
+	<!-- when opened show all this  -->
 	<div class="mainMenu menuHide" id="mainMenuOpened">
 		<img src="img/icons/close.svg" class="closeIcon menuHide"  alt="menuCloseIcon" width="90" height="90" onclick="closeMenu()">
 
@@ -53,19 +53,17 @@
 
 	<script>
 
-
+		// preset blockHeight for a fallback
 	var contentBlockHeight = 200;
-	var scrollNow = true;
-	var scrollToPx=0;
-
+	
+		// when menu is requested by user
 		function openMenu(){
-			// document.getElementById("mainMenu").style.pointer-events="none";
-			// document.getElementById("mainMenuOpened").style.opacity="1";
 
+			// do not let scrolling when opened
 			var body = document.getElementsByTagName("BODY")[0];
             body.style.overflow="hidden";
 
-
+            // show all hidden elements
 			var menuElements = document.getElementsByClassName('menuHide');
     		var count = menuElements.length;
 
@@ -78,14 +76,16 @@
 		}
 
 
-
+		// when menu is closed
 		function closeMenu(){
 			var menuElements = document.getElementsByClassName('menuHide');
     		var count = menuElements.length;
 
+    		// let page be scrollable
     		var body = document.getElementsByTagName("BODY")[0];
             body.style.overflow="scroll";
 
+            // hide all elements
 			for (var i = 0; i < count; i++) {
 				var element = menuElements[i];
 				element.style.display="none";
@@ -96,56 +96,96 @@
 
 
 		function onLoad(){
-			// var vieportHeight = document.documentElement.clientHeight/clientWidth;
-
-			// document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
-			// document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+			// make menu full screen
 			document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
 
-			
-			
-			// if(window.innerWidth<=720){
-			// 	document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
-			// }else{
-			// 	document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
-			// }
-
-
+			// set when the side nav should hide
 			var mobileBreakPoint = 37*16;
 
 			var contentBlocks = document.getElementsByClassName('contentBlock');
     		var count = contentBlocks.length;
 
 
+    		// adjust height of content blocks
+
 			for (var i = 0; i < count; i++) {
 				var element = contentBlocks[i];
 				contentBlockHeight = window.innerHeight/100*80;
-				element.style.height=contentBlockHeight+"px";
 				
-
-				if (window.innerWidth<mobileBreakPoint){
-					element.style.width=(document.documentElement.clientWidth)+"px";
+				if(window.innerHeight/100*80>400){
+					element.style.height=contentBlockHeight+"px";
 				}else{
-					element.style.width=(window.innerWidth-150)+"px";
+					element.style.height=400+"px";
 				}
+				
+				// hide side nav on smaller screens
+				var widthTooSmall = window.innerWidth<mobileBreakPoint;
+				var heightTooSmall = window.innerHeight<550;
+
+				var setToFullScreen = (document.documentElement.clientWidth)+"px";
+				var setToNotFullScreen = element.style.width=(window.innerWidth-150)+"px";
+
+				if(widthTooSmall||heightTooSmall) {
+					element.style.width=setToFullScreen;
+					document.getElementsByClassName("sideNav")[0].style.display="none";
+				}
+
+				if(!widthTooSmall&&!heightTooSmall) {
+					element.style.width = setToNotFullScreen;
+					document.getElementsByClassName("sideNav")[0].style.display="block";
+				} 
 				
 			}
 
+			// run another js content 
 			onLoad1();
 
-			// var sideNav = document.getElementById('sideNav');
+			
+			// compress main menu when on a screen with small height
+			var navHeightSmall = 480;
 
-			// if(window.innerWidth<mobileBreakPoint){
-			// 	sideNav.style.display="none";
-			// }else{
-			// 	sideNav.style.display="block";
-			// }
+            var menuButtonsLogIn = document.getElementsByClassName("menuButtonsLogIn")[0];
+
+            var menuButtonMain01 = document.getElementsByClassName("menuButtonsMain01")[0];
+            var menuButtonMain02 = document.getElementsByClassName("menuButtonsMain02")[0];
+            var menuButtonMain03 = document.getElementsByClassName("menuButtonsMain03")[0];
+            var menuButtonMain04 = document.getElementsByClassName("menuButtonsMain04")[0];
+
+            var contact01 = document.getElementsByClassName("contact01")[0];
+            var contact02 = document.getElementsByClassName("contact02")[0];
+
+
+            if (window.innerHeight<navHeightSmall){
+                menuButtonsLogIn.style.bottom = 15+"rem";
+
+                menuButtonMain01.style.bottom = 1+"rem";
+                menuButtonMain02.style.bottom = 0+"rem";
+                menuButtonMain03.style.bottom = -1+"rem";
+                menuButtonMain04.style.bottom = -2+"rem";
+
+                contact01.style.bottom = 1 +"rem";
+                contact02.style.bottom = 0 +"rem";
+            }else{
+
+            	menuButtonsLogIn.style.bottom = 27+"rem";
+
+                menuButtonMain01.style.bottom = 10+"rem";
+                menuButtonMain02.style.bottom = 8+"rem";
+                menuButtonMain03.style.bottom = 6+"rem";
+                menuButtonMain04.style.bottom = 4+"rem";
+
+                contact01.style.bottom = 3 +"rem";
+                contact02.style.bottom = 1 +"rem";
+
+            }
 
 
 
 			
 		}
 
+
+		// run all code on resizes
 		window.onresize = function(event) {
     		onLoad();
 		};
@@ -160,20 +200,15 @@
 
 
 
-
+		<!-- side nav -->
 		<nav class="sideNav" id="sideNav">
-		<!-- <a class="menuItem1" onClick="scrollTo('what')">WHAT</a>
-		<a class="menuItem2" onClick="scrollTo('updates')">UPDATES</a>
-		<a class="menuItem3">WHERE</a>
-		<a class="menuItem4">HOW</a>
-		<a class="menuItem5">BUNDLES</a> -->
 
-		<a href="#signIn" class="menuItem1SignIn">SIGN IN</a>
-		<a href="#signUp" class="menuItem2SignUp" >SIGN UP</a>
+			<a href="#signIn" class="menuItem1SignIn">SIGN IN</a>
+			<a href="#signUp" class="menuItem2SignUp" >SIGN UP</a>
 
 
 
-	</nav>
+		</nav>
 
 
 
@@ -184,20 +219,20 @@
 
 
 
-
+		<!-- blocks with content inside -->
 		<div class="contentBlock">
 
-
+			<!-- sign in block -->
 			<div id="signIn" class="logInBlock logInBlock01">
 				
 				<h1 id="logInBlockTitle01">Sign In</h1>
 
 				<form class="registerForm whiteCard">
 					<p class="fieldLabel"> Email </p>
-					<input class="" type="email" placeholder="myemail@gmail.com">
+					<input type="email" placeholder="myemail@gmail.com">
 
 					<p class="fieldLabel"> Password </p>
-					<input class="" type="password" placeholder="*************">
+					<input type="password" placeholder="*************">
 
 					<input type="submit" class="button" onclick="window.open('index.html')" value="SIGN IN">
 				</form>
@@ -205,35 +240,7 @@
 			</div>
 
 
-		<!-- backup
-		<div class="logInBlock logInBlock02">
-		
-			<h1 id="logInBlockTitle02">Sign Up</h1>
-
-			<form class="registerForm">
-				<p class="fieldLabelDark"> First Name </p>
-				<input class="dark" type="text" placeholder="Jane">
-
-				<p class="fieldLabelDark"> Last Name </p>
-				<input class="dark" type="text" placeholder="Doe">
-				
-
-				<p class="fieldLabelDark"> Email </p>
-				<input class="dark" type="email" placeholder="myemail@gmail.com">
-
-				<p class="fieldLabelDark"> Password </p>
-				<input class="dark" type="password" placeholder="*************">
-
-				<p class="fieldLabelDark"> Confirm Password </p>
-				<input class="dark" type="password" placeholder="*************">
-
-				<input type="submit" class="button buttonWhite" onclick="window.open('index.html')">
-			</form>
-		</div> -->
-
-
-
-
+			<!-- sign out block -->
 
 			<div id="signUp"  class="logInBlock logInBlock02">
 			
@@ -241,20 +248,20 @@
 
 				<form class="registerForm whiteCard">
 					<p class="fieldLabel"> First Name </p>
-					<input class="" type="text" placeholder="Jane">
+					<input type="text" placeholder="Jane">
 
 					<p class="fieldLabel"> Last Name </p>
-					<input class="" type="text" placeholder="Doe">
+					<input type="text" placeholder="Doe">
 					
 
 					<p class="fieldLabel"> Email </p>
-					<input class="" type="email" placeholder="myemail@gmail.com">
+					<input type="email" placeholder="myemail@gmail.com">
 
 					<p class="fieldLabel"> Password </p>
-					<input class="" type="password" placeholder="*************">
+					<input type="password" placeholder="*************">
 
 					<p class="fieldLabel"> Confirm Password </p>
-					<input class="" type="password" placeholder="*************">
+					<input type="password" placeholder="*************">
 
 					<input type="submit" class="button" onclick="window.open('index.html')" value="SIGN UP">
 				</form>
@@ -273,24 +280,18 @@
 
 		<script>
 
-
-
 		function onLoad1(){
 
 
-			
-
-			
-		
-			
+			// correct the height of the login block
 			var logInBlocks = document.getElementsByClassName('logInBlock');
     		var count = logInBlocks.length;
 
 			for (var i = 0; i < count; i++) {
 				var element = logInBlocks[i];
-				element.style.minHeight=(window.innerHeight)+"px";
+				element.style.minHeight=(window.innerHeight)/100*80+"px";
 				if(window.innerWidth<(50*16)){
-				element.style.minHeight="auto";
+					element.style.minHeight="auto";
 				}
 
 			}
@@ -299,11 +300,6 @@
 			
 		}
 
-
-
-		// window.onresize = function(event) {
-  //   		onLoad();
-		// };
 
 
 	</script>
