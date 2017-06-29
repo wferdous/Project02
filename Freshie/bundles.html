@@ -68,6 +68,10 @@
 			// document.getElementById("mainMenuOpened").style.opacity="1";
 
 
+			var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="hidden";
+
+
 			var menuElements = document.getElementsByClassName('menuHide');
     		var count = menuElements.length;
 
@@ -84,6 +88,9 @@
 		function closeMenu(){
 			var menuElements = document.getElementsByClassName('menuHide');
     		var count = menuElements.length;
+
+    		var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
 
 			for (var i = 0; i < count; i++) {
 				var element = menuElements[i];
@@ -218,7 +225,7 @@
 			            
 			           
 		            <div class="productDetails"> 
-		                <h3 class="title">Summer Paradise</h3>
+		                <h3>Summer Paradise</h3>
 		             
 		            
 		          		<p class="description"> Make your summer last forever with this amazing bundle. Bright, juicy and tasty! Amazing fruits perfect for the summer lovers.</p>
@@ -302,7 +309,7 @@
 			        
 			           
 		            <div class="productDetails"> 
-		                <h3 class="title">Tropical Breeze</h3>
+		                <h3>Tropical Breeze</h3>
 		             
 		            
 		          		<p class="description">Dip your toes into the warm water of the pacific ocean. The collection of fruits that will take you on a trip to tropics and back in no time. </p>
@@ -382,7 +389,7 @@
 			        
 			           
 		            <div class="productDetails"> 
-		                <h3 class="title">Very Berry</h3>
+		                <h3>Very Berry</h3>
 		             
 		            
 		          		<p class="description">How about a nice walk in the woods? This bundle will take you through a fun adventure throught the beautiful woods right after a nice warm summer rain. </p>
@@ -460,7 +467,7 @@
 			        
 			           
 		            <div class="productDetails"> 
-		                <h3 class="title">Sweet Childhood</h3>
+		                <h3>Sweet Tooth</h3>
 		             
 		            
 		          		<p class="description"> This bundle is for growing boys and girls. To be strong and energetic we have collected fruits with the most vitamins and without anything allergenic. </p>

@@ -13,28 +13,218 @@
 
 </head>
 
-<body>
-  <!-- <img src="img/thankyou.jpeg" alt="add" width="100%">
+<body onload="onLoad()">
 
-            <section>
 
-                <div class="thankyouCard">
-                    
-                    <h4 class="reviewName">Thank you</h4>
-                  
-        
-                </div>
 
-            </section>-->
 
-<div id="thankyouImg" class="thankyouCard">
-   
-    <p class="paragraph"> Thank you for ordering with Freshiee. <br>
-    Your order is successful.</p>
 
-   <input type="submit" class="button buttonBlue">
+
+<img src="img/icons/menu.svg" class="menuIcon" width="90" height="90" onclick="openMenu()">
+  <img src="img/icons/menuWhite.svg" class="menuIconWhite" width="90" height="90" onclick="openMenu()">
+
+
+  <div class="mainMenu menuHide" id="mainMenuOpened">
+    <img src="img/icons/close.svg" class="closeIcon menuHide" width="90" height="90" onclick="closeMenu()">
+
+    <a class="menuHide menuButtonsLogIn" href="login.html"> SIGN IN / SIGN UP</a> 
+
+    <a class="menuHide menuButtonsMain menuButtonsMain01" href="index.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain01">  HOME  </h1></a>
+    <a class="menuHide menuButtonsMain menuButtonsMain02" href="profile.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain02">  PROFILE  </h1></a>
+    <a class="menuHide menuButtonsMain menuButtonsMain03" href="reviews.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain03">  REVIEWS  </h1></a>
+    <a class="menuHide menuButtonsMain menuButtonsMain04" href="citations.html"> <h1 class="menuHide menuButtonsMain menuButtonsMain04">  CITATIONS  </h1></a>
+
+
+    
+
+
+    <h2 class="menuHide contact contact01">
+      604-594-3948
+    </h2>
+
+    <h2 class="menuHide contact contact02">
+      contact_us@freshie.ca
+    </h2>
+
+
+    
 
   </div>
+
+
+
+  <script>
+
+
+  var contentBlockHeight = 200;
+  var scrollNow = true;
+  var scrollToPx=0;
+
+    function openMenu(){
+      // document.getElementById("mainMenu").style.pointer-events="none";
+      // document.getElementById("mainMenuOpened").style.opacity="1";
+
+      var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="hidden";
+
+
+      var menuElements = document.getElementsByClassName('menuHide');
+        var count = menuElements.length;
+
+      for (var i = 0; i < count; i++) {
+        var element = menuElements[i];
+        element.style.display="block";
+      }
+
+
+    }
+
+
+
+    function closeMenu(){
+      var menuElements = document.getElementsByClassName('menuHide');
+        var count = menuElements.length;
+
+        var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
+
+      for (var i = 0; i < count; i++) {
+        var element = menuElements[i];
+        element.style.display="none";
+      }
+
+
+    }
+
+
+    function onLoad(){
+      // var vieportHeight = document.documentElement.clientHeight/clientWidth;
+
+      // document.getElementById("mainMenuOpened").style.height=window.screen.availHeight+"px";
+      // document.getElementById("mainMenuOpened").style.height=document.documentElement.clientHeight+"px";
+      document.getElementById("mainMenuOpened").style.height=window.innerHeight+"px";
+
+      
+      
+      // if(window.innerWidth<=720){
+      //  document.getElementById("cart").style.height=(window.innerHeight-300-40)+"px";
+      // }else{
+      //  document.getElementById("cart").style.height=(window.innerHeight-150-40)+"px";
+      // }
+
+
+      var mobileBreakPoint = 37*16;
+
+      var contentBlocks = document.getElementsByClassName('contentBlock');
+        var count = contentBlocks.length;
+
+
+      for (var i = 0; i < count; i++) {
+        var element = contentBlocks[i];
+        contentBlockHeight = window.innerHeight/100*80;
+        element.style.height=contentBlockHeight+"px";
+        
+
+        if (window.innerWidth<mobileBreakPoint){
+          element.style.width=(document.documentElement.clientWidth)+"px";
+        }else{
+          element.style.width=(window.innerWidth-150)+"px";
+        }
+        
+      }
+
+
+
+      onLoad2();
+
+
+
+      
+    }
+
+    window.onresize = function(event) {
+        onLoad();
+    };
+
+
+
+
+
+
+  </script>
+
+
+
+
+
+
+
+  
+
+  <div id="thankyouImg" class="thankyouCard">
+
+   
+    <p class="paragraph thankYou"> 
+    <span style="font-size:3rem; text-align:center; display:block;"> THANK YOU </span> <br>
+    Thank you for ordering with Freshie. <br>
+    Your order is successful.</p>
+
+    <a class="button centered" href="index.html">GO HOME</a>
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <script>
+  function onLoad2(){
+
+
+    var thankyouCard = document.getElementsByClassName('thankyouCard')[0];
+
+
+
+    if(window.innerHeight>300){
+      thankyouCard.style.height = window.innerHeight + "px";
+    }else{
+      thankyouCard.style.height = "300" + "px";
+    }
+    
+
+  }
+    
+
+  
+
+ </script>
+
+
+
+
+
+
+
+
+
+
 
 
 </body>

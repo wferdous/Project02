@@ -61,6 +61,9 @@
 			// document.getElementById("mainMenu").style.pointer-events="none";
 			// document.getElementById("mainMenuOpened").style.opacity="1";
 
+			var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="hidden";
+
 
 			var menuElements = document.getElementsByClassName('menuHide');
     		var count = menuElements.length;
@@ -78,6 +81,9 @@
 		function closeMenu(){
 			var menuElements = document.getElementsByClassName('menuHide');
     		var count = menuElements.length;
+
+    		var body = document.getElementsByTagName("BODY")[0];
+            body.style.overflow="scroll";
 
 			for (var i = 0; i < count; i++) {
 				var element = menuElements[i];
